@@ -33,14 +33,14 @@
                         </v-col>
                         <v-col cols="12" md="4" sm="12" xs="12">
                             <v-btn width="100%"
-                                :class="[hoverAndroid ? 'foo-hover-true' : 'foo-hover-false' + ' text-capitalize']"
+                                :class="[(hoverAndroid ? 'foo-hover-true' : 'foo-hover-false') + ' text-capitalize']"
                                 @mouseover="hoverAndroid = true" @mouseleave="hoverAndroid = false">
                                 <v-icon class="mr-4">mdi-google-play</v-icon>
                                 Android
                             </v-btn>
                         </v-col>
                         <v-col cols="12" md="4" sm="12" xs="12">
-                            <v-btn :class="[hoverApple ? 'foo-hover-true' : 'foo-hover-false' + ' text-capitalize']"
+                            <v-btn :class="[(hoverApple ? 'foo-hover-true' : 'foo-hover-false') + ' text-capitalize']"
                                 width="100%" @mouseover="hoverApple = true" @mouseleave="hoverApple = false">
                                 <v-icon class="mr-4">mdi-apple</v-icon>
                                 iOS
@@ -48,7 +48,7 @@
                         </v-col>
                         <v-col cols="12" md="4" sm="12" xs="12">
                             <v-btn light width="100%" outlined
-                                :class="[hovered ? 'foo-hover-false' : 'foo-hover-true' + ' text-capitalize']"
+                                :class="[(hovered ? 'foo-hover-false' : 'foo-hover-true') + ' text-capitalize']"
                                 @mouseover="hovered = true" @mouseleave="hovered = false">
                                 Learn More
                                 <v-icon class="ml-4">mdi-arrow-right</v-icon>

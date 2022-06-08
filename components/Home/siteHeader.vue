@@ -1,6 +1,10 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer" color="#16184E" fixed app temporary>
+    <v-navigation-drawer v-model="drawer" dark color="#16184E" fixed app temporary>
+      <v-col cols="12">
+        <v-img :src="require('@/assets/CamDxLogo.png')" :contain="true" height="40"></v-img>
+      </v-col>
+      <v-divider />
       <v-list dense>
         <v-list-item-group v-for="(item, i) in items" :key="i" color="primary">
           <v-list-item v-if="!item.submenu" :to="item.to">
@@ -8,13 +12,13 @@
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-action> -->
             <v-list-item-content>
-              <v-list-item-title v-text="item.title.toUpperCase()" />
+              <v-list-item-title v-text="item.title" />
             </v-list-item-content>
           </v-list-item>
           <v-list-group v-else :prepend-icon="item.icon" no-action>
             <template #activator>
               <v-list-item-content>
-                <v-list-item-title v-text="item.title.toUpperCase()"></v-list-item-title>
+                <v-list-item-title v-text="item.title"></v-list-item-title>
               </v-list-item-content>
             </template>
             <v-list-item v-for="(child, index) in item.submenu" :key="index" :to="child.to">
@@ -24,12 +28,23 @@
             </v-list-item>
           </v-list-group>
         </v-list-item-group>
+        <v-list-item-group color="primary">
+          <v-list-item :to="$i18n.locale === 'kh' ? switchLocalePath('en') : switchLocalePath('kh')">
+            <v-list-item-action>
+              <v-icon>mdi-web-box</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title v-text="$t('language')" />
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar fixed app height="64" elevate-on-scroll dark color="#16184E" v-scroll="onScroll">
+    <v-app-bar v-scroll="onScroll" fixed app height="64"  elevate-on-scroll dark color="#16184E" >
       <!-- <v-container> -->
       <nuxt-link to="/" class="d-flex">
-        <v-img :src="require('@/assets/CamDxLogo.png')" :contain="true" height="50"></v-img>
+        <v-img  :src="require('@/assets/CamDxLogo.png')" :contain="true" height="45"></v-img>
+        <!-- <v-img class="hidden-md-and-up" :src="require('@/assets/camdx_thumbnail.png')" :contain="true" height="50"></v-img> -->
       </nuxt-link>
       <v-spacer />
 
@@ -37,7 +52,8 @@
         <template v-if="name.submenu">
           <v-menu :key="menuitem" offset-y transition="slide-y-transition" bottom>
             <template #activator="{ on, attrs }">
-              <v-btn plain class="py-5 submenubtn hidden-sm-and-down text-capitalize" :ripple="false" v-bind="attrs"
+              <v-btn 
+                plain class="py-5 submenubtn hidden-sm-and-down text-capitalize" :ripple="false" v-bind="attrs"
                 style="height: auto" v-on="on">
                 {{ name.title }}
                 <v-icon right small class="mx-0"> mdi-chevron-down </v-icon>
@@ -50,28 +66,25 @@
             </v-list>
           </v-menu>
         </template>
-        <v-btn v-else :key="menuitem" depressed tile plain class="py-8 hidden-sm-and-down text-capitalize"
+        <v-btn 
+          v-else :key="menuitem" depressed tile plain class="py-8 hidden-sm-and-down text-capitalize"
           :to="name.to">{{ name.title }}<v-icon>{{ name.icon }}</v-icon>
         </v-btn>
       </template>
-      <v-btn id="language" key="language" depressed tile plain class="py-8 hidden-sm-and-down text-capitalize"
+      <v-btn 
+        id="language" key="language" depressed tile plain class="py-8 hidden-sm-and-down text-capitalize"
         :to="$i18n.locale === 'kh' ? switchLocalePath('en') : switchLocalePath('kh')">
         <v-icon>mdi-web-box</v-icon>{{ $t('language') }}
       </v-btn>
-      <!-- <v-spacer /> -->
       <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer" />
-      <!-- </v-container> -->
-      <template v-slot:extension>
-        <div v-show="fabTab">
-          <Tab :tabbgcolor="'#16184E'"></Tab>
-        </div>
-        <!-- <v-tabs v-show="fabTab" align-with-title class="ma-14">
-          <v-tab v-for="(item, index) in Tabitems" :key="index" class="text-capitalize"
-            @click="$vuetify.goTo('#' + item.to, options)">
-            {{ item.label }}
-          </v-tab>
-        </v-tabs> -->
+      
+      <template v-if="fabTab" #extension >
+          <Tab v-show="fabTab" :tabbgcolor="'#16184E'" data-aos="zoom-in-up" 
+              data-aos-duration="500"></Tab>
+
       </template>
+
+    
     </v-app-bar>
   </div>
 </template>
@@ -80,11 +93,13 @@
 import Tab from "./Tab.vue";
 
 export default {
+    components: { Tab },
     data() {
         return {
             clipped: false,
             drawer: false,
             fabTab: false,
+            extended: false,
             iTab: this.itemsTab,
             items: [
                 {
@@ -100,26 +115,25 @@ export default {
                 {
                     icon: "",
                     title: "Resources",
-                    to: "#",
                     submenu: [
                         {
                             title: "Event Calendar",
-                            to: "#",
+                            to: "/inspire",
                         },
                         {
                             title: "Press Release",
-                            to: "#",
+                            to: "/index1",
                         },
                         {
                             title: "Documents",
-                            to: "#",
+                            to: "/#",
                         },
                     ],
                 },
                 {
                     icon: "mdi-open-in-new",
                     title: "Monitoring",
-                    to: "#",
+                    to: "/monitor",
                 },
                 // {
                 //   icon: 'mdi-web-box',
@@ -160,10 +174,9 @@ export default {
             if (typeof window === "undefined")
                 return;
             const top = window.pageYOffset || e.target.scrollTop || 0;
-            this.fabTab = top > 1000;
+            this.fabTab = top > 1000 && this.$route.path==='/'
         },
     },
-    components: { Tab }
 }
 </script>
 
