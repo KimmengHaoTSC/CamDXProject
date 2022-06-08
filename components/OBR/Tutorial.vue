@@ -1,7 +1,7 @@
 <template>
     <v-card  class="rounded-0 pa-10" light>
         <v-container>
-            <v-row v-for="(item, index) in items" :key="index" class="pa-5">
+            <v-row v-for="(item, index) in items" :key="index" class="pa-5" data-aos="zoom-out-right">
                 <v-col cols="12">
                     <div class="text-h3 bold font-weight-medium">
                         {{item.question}}
@@ -12,8 +12,10 @@
                         
                     </div>
                 </v-col>
-                <v-img :contain="true"  height="500" :src="require('assets/' + item.image + '.png')" width="100">
+                <v-col cols="12">
+                <v-img :contain="true"  height="500" :src="require('assets/' + item.image + '.png')">
                         </v-img>
+                </v-col>
             </v-row>
         </v-container>
     </v-card>

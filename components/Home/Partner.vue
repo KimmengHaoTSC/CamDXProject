@@ -6,11 +6,10 @@
                         Our Partners
                     </div>
                 <v-row>
-                    <v-col v-for="(item, index) in 5" :key="index" align="center">
-                        <div data-aos="flip-right" data-aos-duration="3000">
-                            <v-img :contain="true" height="100" :src="require('assets/partner' + item + '.png')" width="100">
-                            </v-img>
-                        </div>
+                    <v-col v-for="(item, index) in 5" :key="index" align="center"
+                            data-aos="flip-right" data-aos-duration="1500">
+                        <v-img :contain="true" height="100" :src="require('assets/partner' + item + '.png')" width="100">
+                        </v-img>
                     </v-col>
                 </v-row>
             </v-col>

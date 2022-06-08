@@ -17,7 +17,7 @@
             <v-col>
                 <v-row >
                     <v-col v-for="(item, index) in items" :key="index" cols="12" md="6" sm="12">
-                        <div data-aos="zoom-in-up" data-aos-duration="2500">
+                        <div data-aos="zoom-in-up" data-aos-duration="1000">
                             <v-card color="#F8F9FA" height="300px">
                                 <v-card-title>
                                     <v-img 

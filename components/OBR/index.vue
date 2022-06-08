@@ -3,7 +3,7 @@
             <v-container>
                 <v-col cols="12">
                     <div class="text-h3 bold font-weight-medium">
-                        CamDigiKey, a Mobile Authentication Application
+                        CamDigiKey, {{$t('camAuthenApp')}}
                     </div>
                 </v-col>
                 <v-col cols="12">
@@ -24,8 +24,7 @@
                         </div>
                     </v-row>
                     <v-row>
-                        <v-col v-for="(item, index) in items" :key="index" class="d-flex flex-wrap" align="center">
-                            <v-row>
+                        <v-col data-aos="fade-left" v-for="(item, index) in items" :key="index" cols="12" md="3" sm="6" xs="6">
                                 <v-card-title>
                                     <v-img 
                                         :contain="true" height="100"
@@ -34,7 +33,6 @@
                                 <v-card-text class="text-h5 font-weight-bold text-center">
                                     {{ item.title }}
                                 </v-card-text>
-                            </v-row>
                         </v-col>
                     </v-row>
                 </v-col>
