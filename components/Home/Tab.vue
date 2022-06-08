@@ -7,15 +7,14 @@
     next-icon="mdi-arrow-right-bold-box-outline"
     prev-icon="mdi-arrow-left-bold-box-outline"
     show-arrows
-    v-on:scroll="handleScroll"
     hide-slider="true"
     align-with-title="false"
+    @scroll="handleScroll"
   >
     <v-tab
-      id="item.to"
-      class="text-capitalize"
       v-for="(item, index) in items"
       :key="index"
+      class="text-capitalize"
       @click="$vuetify.goTo('#' + item.to, options)"
     >
       {{ item.label }}

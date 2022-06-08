@@ -8,8 +8,9 @@
                     </div>
                 </v-col>
                 <v-col cols="12">
+                    <!-- eslint-disable vue/no-v-html -->
                     <div class="text-md" v-html="item.answer">
-                        
+                    <!-- eslint-disable vue/no-v-html -->
                     </div>
                 </v-col>
                 <v-col cols="12">

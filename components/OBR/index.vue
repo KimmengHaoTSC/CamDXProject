@@ -24,7 +24,7 @@
                         </div>
                     </v-row>
                     <v-row>
-                        <v-col data-aos="fade-left" v-for="(item, index) in items" :key="index" cols="12" md="3" sm="6" xs="6">
+                        <v-col v-for="(item, index) in items" :key="index" data-aos="fade-left" cols="12" md="3" sm="6" xs="6">
                                 <v-card-title>
                                     <v-img 
                                         :contain="true" height="100"

@@ -79,7 +79,8 @@
       <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer" />
       
       <template v-if="fabTab" #extension >
-          <Tab v-show="fabTab" :tabbgcolor="'#16184E'" data-aos="zoom-in-up" 
+          <Tab 
+            v-show="fabTab" :tabbgcolor="'#16184E'" data-aos="zoom-in-up" 
               data-aos-duration="500"></Tab>
 
       </template>
