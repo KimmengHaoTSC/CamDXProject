@@ -7,15 +7,13 @@
     next-icon="mdi-arrow-right-bold-box-outline"
     prev-icon="mdi-arrow-left-bold-box-outline"
     show-arrows
-    hide-slider="true"
-    align-with-title="false"
-    @scroll="handleScroll"
+    :hide-slider=true
   >
     <v-tab
       v-for="(item, index) in items"
       :key="index"
       class="text-capitalize"
-      @click="$vuetify.goTo('#' + item.to, options)"
+      @click="$vuetify.goTo('#' + item.to)"
     >
       {{ item.label }}
     </v-tab>
@@ -24,7 +22,12 @@
 <script>
 export default {
   name: 'TabPage',
-  props: ['tabbgcolor'],
+  props: {
+    tabbgcolor: {
+      type: String,
+      default: '#FFFFFF'
+    }
+  },
   data() {
     return {
       isIntersecting: false,

@@ -26,7 +26,6 @@
             </v-row>
 
             <v-row>
-
                 <v-col cols="12">
                     <div class="md-2 text-center">
                         Development integration guides:
@@ -39,7 +38,7 @@
                     <v-btn 
                         depressed  width="100%" 
                         :class="[(item.variable ? 'text-hover-true' : 'text-hover-false') + ' mr-1 text-capitalize']"
-                        @mouseover="item.variable = true" @mouseleave="item.variable = false">
+                        @mouseover="item.variable = false" @mouseleave="item.variable = true">
                     <v-icon class="mr-4">{{item.icon}}</v-icon>
                        {{item.label}}
                     </v-btn>

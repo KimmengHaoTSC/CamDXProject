@@ -11,11 +11,9 @@
   </v-app>
 </template>
 
-<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 <script>
-// import AppBar from '../components/AppBar.vue';
-import Footer from '../components/Home/Footer.vue';
-import SiteHeader from '../components/Home/siteHeader.vue';
+import Footer from '../components/Footer.vue';
+import SiteHeader from '../components/AppBar.vue';
 // import AOS from "aos";
 export default {
     name: "DefaultLayoutPage",
@@ -65,8 +63,4 @@ export default {
   .fb-btn.v-btn {
     border: thin solid #ffffff !important;
   }
-  .floatAboveEverything {
-	z-index: 1000; 
-	position: absolute;
-}
 </style>

@@ -10,15 +10,12 @@
                         </v-row>
                         <v-row>Phone: (855) 81 888 296<br/>
                             Email: camdx@mef.gov.kh</v-row>
-
                     </v-col>
                     <v-col cols="12" md="3" sm="6" xs="12">
                         <v-row class="mb-5">CamDX</v-row>
                         <v-row class="mb-5">Principles
                         </v-row>
                         <v-row class="mb-5">CamDigiKey</v-row>
-
-
                     </v-col>
                     <v-col cols="12" md="3" sm="6" xs="12">
                         <v-row class="mb-5">Services</v-row>
@@ -39,7 +36,6 @@
             <v-row class="ma-4" color="#16184E">
                 <v-col col="4" align="center">
                     <v-list-item-title>©2020-2022 CamDX. All Rights Reserved</v-list-item-title>
-
                 </v-col>
                 <v-col col="4">
 

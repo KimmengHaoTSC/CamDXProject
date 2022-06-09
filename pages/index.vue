@@ -1,14 +1,8 @@
 <template>
     <section id="home">
         <MainTitle></MainTitle>
-        <!-- <section id="tab"> -->
         <section id="overview">
             <Tab :tabbgcolor="'#FFFFFF'"></Tab>
-        <!-- </section> -->
-
-        <!-- <v-btn class="ma-2" color="secondary" @click="expand2 = !expand2">
-            Expand X Transition
-        </v-btn> -->
 
             <CamDXdetail></CamDXdetail>
             <MainGoal></MainGoal>
@@ -45,6 +39,7 @@ import MainComponent from '../components/Home/MainComponent.vue';
 import SecureServer from '../components/Home/SecureServer.vue';
 import ExchangeData from '../components/Home/ExchangeData.vue';
 import CamDigiKey from '../components/Home/CamDigiKey.vue';
+import MainGoal from '../components/Home/MainGoal.vue';
 import ServiceRun from '../components/Home/ServiceRun.vue';
 import Partner from '../components/Home/Partner.vue';
 import FAQ from '../components/Home/FAQ.vue';
@@ -52,7 +47,7 @@ import Contact from '../components/Home/Contact.vue';
 import MainTitle from '../components/Home/MainTitle.vue';
 export default {
     name: "IndexPage",
-    components: { MainTitle, Tab, CamDXdetail, DesignProperty, MainComponent, SecureServer, ExchangeData, CamDigiKey, ServiceRun, Partner, FAQ, Contact },
+    components: { MainTitle, Tab, CamDXdetail, DesignProperty, MainComponent, MainGoal, SecureServer, ExchangeData, CamDigiKey, ServiceRun, Partner, FAQ, Contact },
     data: () => ({
         expand2: false,
     }),
