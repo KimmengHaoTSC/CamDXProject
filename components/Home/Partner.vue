@@ -1,27 +1,38 @@
 <template>
-    <v-card class="pa-5" dark color="#16184E">
-        <v-container>
-            <v-col cols="12">
-                    <div class="text-h3 font-weight-medium text-center pb-5">
-                        Our Partners
-                    </div>
-                <v-row>
-                    <v-col 
-                        v-for="(item, index) in 5" :key="index" align="center"
-                        data-aos="flip-right" data-aos-duration="1500">
-                        <v-img :contain="true" height="100" :src="require('assets/partner' + item + '.png')" width="100">
-                        </v-img>
-                    </v-col>
-                </v-row>
-            </v-col>
-        </v-container>
-    </v-card>
+  <v-card class="pa-5" dark color="#16184E">
+    <v-container>
+        <div class="text-h3 font-weight-medium text-center pb-5">
+          Our Partners
+        </div>
+          <Swiper :items="items" />
+    </v-container>
+  </v-card>
 </template>
 <script>
+import Swiper from '../Swiper.vue'
 export default {
-    name: 'PartnerPage',
-    data: () => ({
-    }),
+  name: 'PartnerPage',
+  components: { Swiper },
+  data: () => ({
+    items: [
+      {
+        icon: 'partner1',
+        title: '',
+      },
+      {
+        icon: 'partner2',
+        title: '',
+      },
+      {
+        icon: 'partner3',
+        title: '',
+      },
+      {
+        icon: 'partner4',
+        title: '',
+      },
+    ],
+  }),
 }
 </script>
 <style>
