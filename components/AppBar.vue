@@ -139,7 +139,6 @@
       <template v-if="fabTab" #extension>
         <Tab
           v-show="fabTab"
-          :tabbgcolor="'#16184E'"
           data-aos="zoom-in-up"
           data-aos-duration="500"
         ></Tab>

@@ -1,13 +1,12 @@
 <template>
   <v-tabs
-    :background-color="tabbgcolor"
+    background-color="#FFFFFF"
     centered
-    :dark="tabbgcolor == '#16184E'"
-    :light="tabbgcolor == '#FFFFFF'"
+    light
     next-icon="mdi-arrow-right-bold-box-outline"
     prev-icon="mdi-arrow-left-bold-box-outline"
     show-arrows
-    :hide-slider=true
+    :hide-slider="true"
   >
     <v-tab
       v-for="(item, index) in items"
@@ -22,12 +21,6 @@
 <script>
 export default {
   name: 'TabPage',
-  props: {
-    tabbgcolor: {
-      type: String,
-      default: '#FFFFFF'
-    }
-  },
   data() {
     return {
       isIntersecting: false,
