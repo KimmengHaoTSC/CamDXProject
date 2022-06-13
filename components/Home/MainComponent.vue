@@ -4,13 +4,12 @@
             <v-row>
                 <v-col cols="12">
                     <div class="text-h3 font-weight-medium text-center">
-                        CamDX Components
+                        {{ $t('homePage.components.title') }}
                     </div>
                 </v-col>
                 <v-col cols="12">
                     <div class="text-md subtitle md-2 text-center">
-                        CamDX comprises three main components namely core components, trusted components and its
-                        members.
+                        {{ $t('homePage.components.subtitle') }}
                     </div>
                 </v-col>
             </v-row>
@@ -28,10 +27,10 @@
                             <v-col cols="12" md="10" sm="10" xs="12">
                                 <div>
                                     <div class="text-h6 mb-4 font-weight-medium">
-                                        {{ item.title }}
+                                        {{ $t(item.title) }}
                                     </div>
                                     <div class="text-md mb-4 text-justify">
-                                        {{ item.meaning }}
+                                        {{ $t(item.meaning) }}
                                     </div>
                                 </div>
                             </v-col>
@@ -49,18 +48,18 @@ export default {
         items: [
             {
                 icon: 'component1',
-                title: 'Core components',
-                meaning: 'CamDX is a distributed system with no central database performing only data exchange.',
+                title: 'homePage.components.core.title',
+                meaning: 'homePage.components.core.meaning',
             },
             {
                 icon: 'component2',
-                title: 'Trusted components',
-                meaning: 'Enterprise-class security at the application level by ensuring the authenticity, integrity and non-repudiation of the exchanged data.',
+                title: 'homePage.components.trusted.title',
+                meaning: 'homePage.components.trusted.meaning',
             },
             {
                 icon: 'component3',
-                title: 'CamDX members',
-                meaning: 'are entities that wish to communicate with each other through CamDX. Each member connects with information systems of other members through a security server. Thus, all CamDX members need to add a security server, signed to CamDX\'s PKI, to their infrastructure.',
+                title: 'homePage.components.members.title',
+                meaning: 'homePage.components.members.meaning',
             },
         ]
     })

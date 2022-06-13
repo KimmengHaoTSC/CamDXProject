@@ -4,24 +4,24 @@
             <v-row>
                 <v-col cols="12">
                     <div class="text-h3 font-weight-medium text-center">
-                        Characteristics of Security Server
+                        {{ $t('homePage.secureserver.title') }}
                     </div>
                 </v-col>
                 <v-col cols="12">
                     <div class="text-md subtitle md-2 text-center">
-                        Acts as a bridge between two or more information systems engaging in secure data exchange.
+                        {{ $t('homePage.secureserver.subtitle') }}
                     </div>
                 </v-col>
             </v-row>
             <v-row>
                 <v-col cols="12" md="8" sm="12" xs="12" >
                     <v-row v-for="(item, index) in items" :key="index">
-                        <v-col cols="2" md="2" sm="1" xs="1">
+                        <v-col cols="2" md="1" sm="1" xs="1">
                             <v-img :src="require('assets/point.png')" :contain="true" width="30" height="30">
                             </v-img>
                         </v-col>
-                        <v-col cols="10" md="8" sm="11" xs="11">
-                            {{ item }}
+                        <v-col cols="10" md="11" sm="11" xs="11">
+                            {{ $t(item) }}
                         </v-col>
                     </v-row>
                 </v-col>
@@ -34,21 +34,20 @@
 </template>
 <script>
 export default {
-    name: 'DesignPropertypage',
+    name: 'SecureServerpage',
     data: () => ({
         items: [
-            'Establishing a secure channel between two Security Servers in a manner that messages are encrypted, digitally signed and time-stamped to ensure the long-term authenticity value of the transaction',
-            'Creating an overlay network among its peers over the Internet.',
-            'Secured by Public Key Infrastructure (PKI).',
-            'An API gateway with organizational-level access control.',
-            'Handle multiple secure connections with its peers.'
+            "homePage.secureserver.char1",
+            "homePage.secureserver.char2",
+            "homePage.secureserver.char3",
+            "homePage.secureserver.char4",
+            "homePage.secureserver.char5"
         ]
-    }),
+    })
 }
 </script>
 <style>
 .font-title {
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;

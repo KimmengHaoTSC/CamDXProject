@@ -4,29 +4,30 @@
             <v-row>
                 <v-col cols="12">
                     <div class="text-h3 font-weight-medium text-center">
-                        Design Principles
+                        {{ $t('homePage.principles.title') }}
                     </div>
                 </v-col>
                 <v-col cols="12">
                     <div class="text-md subtitle md-2 text-center">
-                        The design principle of CamDX adhering to the design concept of X-Road.
+                        {{ $t('homePage.principles.subtitle') }}
                     </div>
                 </v-col>
             </v-row>
             <v-card-text>
                 <v-row>
-                    <v-col v-for="(item, index) in messages" :key="index" cols="12" md="4" sm="12" xs="12">
+                    <v-col v-for="(item, index) in messages" :key="index" cols="12" md="4" sm="6" xs="6">
                     <div data-aos="flip-left">
 
                         <v-card-text>
-                            <v-img :contain="true" height="100" :src="require('assets/' + item.avatar + '.png')"
+                            <v-img 
+                                :contain="true" height="100" :src="require('assets/' + item.avatar + '.png')"
                                 width="100"></v-img>
                         </v-card-text>
                         <v-card-text class="text-h5 font-weight-bold">
-                            {{ item.title }}
+                            {{ $t(item.title) }}
                         </v-card-text>
                         <v-card-text class="text-md">
-                            {{ item.meaning }}
+                            {{ $t(item.meaning) }}
                         </v-card-text></div>
                     </v-col>
                 </v-row>
@@ -41,33 +42,33 @@ export default {
         messages: [
             {
                 avatar: 'design1',
-                title: 'DISTRIBUTED',
-                meaning: 'CamDX is a distributed system with no central database performing only data exchange.',
+                title: "homePage.principles.distributed.title",
+                meaning: "homePage.principles.distributed.meaning",
             },
             {
                 avatar: 'design2',
-                title: 'SECURE',
-                meaning: 'Enterprise-class security at the application level by ensuring the authenticity, integrity and non-repudiation of the exchanged data.',
+                title: "homePage.principles.secure.title",
+                meaning: "homePage.principles.secure.meaning",
             },
             {
                 avatar: 'design3',
-                title: 'RELIABLE',
-                meaning: 'No single point of failure. Failure could be partial. Each registry owner can employ proactive measures against any kinds of attack.',
+                title: "homePage.principles.reliable.title",
+                meaning: "homePage.principles.reliable.meaning",
             },
             {
                 avatar: 'design4',
-                title: 'DO NOT OWN DATA',
-                meaning: 'CamDX neither store nore see the exchanged data. CamDX only captures meta-data for monitoring and reporting purpose.',
+                title: "homePage.principles.notowndata.title",
+                meaning: "homePage.principles.notowndata.meaning",
             },
             {
                 avatar: 'design5',
-                title: 'EASE OF USE',
-                meaning: 'All communications in CamDX are based on web services, preferably REST API, and therefore can be used by all developers.',
+                title: "homePage.principles.easeofuse.title",
+                meaning: "homePage.principles.easeofuse.meaning",
             },
             {
                 avatar: 'design6',
-                title: 'Twitter',
-                meaning: 'CamDX connects systems built on any platforms and technologies of choice.',
+                title: "homePage.principles.last.title",
+                meaning: "homePage.principles.last.meaning",
             },
         ],
     }),

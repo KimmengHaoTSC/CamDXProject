@@ -23,13 +23,13 @@
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-action> -->
             <v-list-item-content>
-              <v-list-item-title v-text="item.title" />
+              <v-list-item-title v-text=$t(item.title) />
             </v-list-item-content>
           </v-list-item>
           <v-list-group v-else :prepend-icon="item.icon" no-action>
             <template #activator>
               <v-list-item-content>
-                <v-list-item-title v-text="item.title"></v-list-item-title>
+                <v-list-item-title v-text=$t(item.title)></v-list-item-title>
               </v-list-item-content>
             </template>
             <v-list-item
@@ -38,7 +38,7 @@
               :to="child.to"
             >
               <v-list-item-content>
-                <v-list-item-title v-text="child.title"></v-list-item-title>
+                <v-list-item-title v-text=$t(child.title)></v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </v-list-group>
@@ -77,10 +77,10 @@
       </nuxt-link>
       <v-spacer />
 
-      <template v-for="(name, menuitem) in items.slice(0, 4)">
-        <template v-if="name.submenu">
+      <template v-for="(item, index) in items.slice(0, 4)">
+        <template v-if="item.submenu">
           <v-menu
-            :key="menuitem"
+            :key="index"
             offset-y
             transition="slide-y-transition"
             bottom
@@ -94,33 +94,33 @@
                 style="height: auto"
                 v-on="on"
               >
-                {{ name.title }}
+                {{ $t(item.title) }}
                 <v-icon right small class="mx-0"> mdi-chevron-down </v-icon>
               </v-btn>
             </template>
             <v-list dense>
               <v-list-item
-                v-for="item in name.submenu"
-                :key="item.title"
+                v-for="(subitem, subindex) in item.submenu"
+                :key="subindex"
                 link
-                :to="item.to"
+                :to="subitem.to"
               >
-                <v-list-item-title class="text-capitalize">{{
-                  item.title
-                }}</v-list-item-title>
+                <v-list-item-title class="text-capitalize">
+                  {{$t(subitem.title)}}
+                </v-list-item-title>
               </v-list-item>
             </v-list>
           </v-menu>
         </template>
         <v-btn
           v-else
-          :key="menuitem"
+          :key="index"
           depressed
           tile
           plain
           class="py-8 hidden-sm-and-down text-capitalize"
-          :to="name.to"
-          >{{ name.title }}<v-icon>{{ name.icon }}</v-icon>
+          :to="item.to"
+          >{{ $t(item.title) }}<v-icon>{{ item.icon }}</v-icon>
         </v-btn>
       </template>
       <v-btn
@@ -160,61 +160,61 @@ export default {
       items: [
         {
           icon: '',
-          title: 'CamDigiKey',
+          title: 'appbar.camdigikey',
           to: '/',
         },
         {
           icon: '',
-          title: 'OBR',
+          title: 'appbar.obr',
           to: '/obr',
         },
         {
           icon: '',
-          title: 'Resources',
+          title: 'appbar.resources',
           submenu: [
             {
-              title: 'Event Calendar',
+              title: 'appbar.subresources.sub1',
               to: '/inspire',
             },
             {
-              title: 'Press Release',
+              title:  'appbar.subresources.sub2',
               to: '/index1',
             },
             {
-              title: 'Documents',
+              title: 'appbar.subresources.sub3',
               to: '/#',
             },
           ],
         },
         {
           icon: 'mdi-open-in-new',
-          title: 'Monitoring',
+          title: 'appbar.monitoring',
           to: '/monitor',
         },
       ],
       Tabitems: [
         {
-          label: 'Overview',
+          label: 'homePage.tab.overview',
           to: 'overview',
         },
         {
-          label: 'Principles',
+          label: 'homePage.tab.principles',
           to: 'principles',
         },
         {
-          label: 'CamDigiKey',
+          label: 'homePage.tab.camDigiKey',
           to: 'camdigikey',
         },
         {
-          label: 'Service',
+          label: 'homePage.tab.service',
           to: 'service',
         },
         {
-          label: 'F.A.Q',
+          label: 'homePage.tab.faq',
           to: 'faq',
         },
         {
-          label: 'Contact',
+          label: 'homePage.tab.contact',
           to: 'contact',
         },
       ],

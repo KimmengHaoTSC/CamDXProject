@@ -1,6 +1,172 @@
 {
-    "welcome": "Welcome to my app",
+    "welcome": "Welcome to CamDX",
     "language": "English",
-    "mainTitle": "Cambodia Data Exchange Platform",
-    "camAuthenApp": "a Mobile Authentication Application"
+    "appbar" : {
+        "camdigikey" : "CamDigiKey",
+        "obr" : "OBR",
+        "resources" : "Resources",
+        "subresources" : {
+            "sub1": "Event Calendar",
+            "sub2": "Press Release",
+            "sub3": "Documents"
+
+        },
+        "monitoring" : "Monitoring"
+    },
+    "homePage" : {
+        "mainTitle": "Cambodia Data Exchange Platform",
+        "subTitle": "Securely allow multi-lateral data exchange between different information systems over the Internet.",
+        "tab" : {
+            "overview" : "Overview",
+            "principles" : "Priciples",
+            "camdigikey" : "CamDigiKey",
+            "service" : "Service",
+            "faq" : "F.A.Q",
+            "contact" : "Contact"
+        },
+        "camdxDetail" : {
+            "whatisCamDX" : "What is CamDX?",
+            "isCamDX" : "CamDX stands for Cambodia Data eXchange, which adopts the model of X-Road of Estonia. CamDX is a unified yet decentralized data exchange layer between information systems that offers a standardized and secure way to provide and consume services. CamDX ensures confidentiality, integrity, and interoperability between a multitude of different data exchange parties.",
+            "maingoalTitle" : "The main goal of CamDX",
+            "maingoal" : "To build an infrastructure that allows for establishing effortless access to data in government databases (public services) without compromising the security and ownership of the data and with minimal technical changes in the existing information systems."
+        },
+        "principles" : {
+            "title" : "Design Principles",
+            "subtitle" : "The design principle of CamDX adhering to the design concept of X-Road.",
+            "distributed": {
+                "title": "DISTRIBUTED",
+                "meaning": "CamDX is a distributed system with no central database performing only data exchange."
+            },
+            "secure" : {
+                "title": "SECURE",
+                "meaning": "Enterprise-class security at the application level by ensuring the authenticity, integrity and non-repudiation of the exchanged data."
+            },
+            "reliable" : {
+                "title": "RELIABLE",
+                "meaning": "No single point of failure. Failure could be partial. Each registry owner can employ proactive measures against any kinds of attack."
+            },
+            "notowndata" : {
+                "title": "DO NOT OWN DATA",
+                "meaning": "CamDX neither store nore see the exchanged data. CamDX only captures meta-data for monitoring and reporting purpose."
+            },
+            "easeofuse" : {
+                "title": "EASE OF USE",
+                "meaning": "All communications in CamDX are based on web services, preferably REST API, and therefore can be used by all developers."
+            },
+            "last" : {
+                "title": "",
+                "meaning": "CamDX connects systems built on any platforms and technologies of choice."
+            }
+        },
+        "components" : {
+            "title" : "CamDX Components",
+            "subtitle" : "CamDX comprises three main components namely core components, trusted components and its members.",
+            "core": {
+                "title": "Core components",
+                "meaning": "CamDX is a distributed system with no central database performing only data exchange."
+            },
+            "trusted": {
+                "title": "Trusted components",
+                "meaning": "Enterprise-class security at the application level by ensuring the authenticity, integrity and non-repudiation of the exchanged data."
+            },
+            "members": {
+                "title": "CamDX members",
+                "meaning": "are entities that wish to communicate with each other through CamDX. Each member connects with information systems of other members through a security server. Thus, all CamDX members need to add a security server, signed to CamDX's PKI, to their infrastructure."
+            }
+        },
+        "secureserver" : {
+            "title" : "Characteristics of Security Server",
+            "subtitle" : "Acts as a bridge between two or more information systems engaging in secure data exchange.",
+            "char1" : "Establishing a secure channel between two Security Servers in a manner that messages are encrypted, digitally signed and time-stamped to ensure the long-term authenticity value of the transaction",
+            "char2" : "Creating an overlay network among its peers over the Internet.",
+            "char3" : "Secured by Public Key Infrastructure (PKI).",
+            "char4" : "An API gateway with organizational-level access control.",
+            "char5" : "Handle multiple secure connections with its peers."
+        },
+        "exchange" : {
+            "title" : "Security of Data Exchange",
+            "subtitle" : "A CamDX member does not require to develop its own solution ensuring the security and privacy of the data. In CamDX, security of data exchange is ensured by distributed architecture, security server and the use of standard technology.",
+            "confidentiality": {
+                "title": "Confidentiality",
+                "meaning": "Guaranteed with the condition that encrypted data are exchanged directly between members and do not pass through any third parties."
+            },
+            "availability": {
+                "title": "Availability",
+                "meaning": "data exchange is practically independent of CamDX and its core components."
+            },
+            "integrity": {
+                "title": "Integrity",
+                "meaning": "CamDX is a distributed system with no central database performing only data exchange."
+            }
+        },
+        "camdigikey" : {
+            "title" : "CamDigiKey, a Mobile Authentication Application",
+            "subtitle" : "A secure yet easy mobile application to authenticate oneself digitally to access to various government digital services running through CamDX.",
+            "content" : "Users must register to obtain valid digital identity. To login, users simply use the application to scan the QR code appeared in the login screen of the government portals. Online Business Registration is the first government portal that uses CamDigiKey to authenticate the user digital identity."
+        },
+        "servicerun" : {
+            "title" : "Services Run Through CamDX",
+            "onlineBusiness": {
+                "title": "Online Business Registration",
+                "meaning": "a new business registration platform that combines at least four main relevant information systems into a single portal..."
+            },
+            "globaltravel": {
+                "title": "Global Travel Assessment System",
+                "meaning": "a new business registration platform that combines at least four main relevant information systems into a single portal..."
+            },
+            "validation": {
+                "title": "Validation Application on Guarantee/Invitation",
+                "meaning": "a new business registration platform that combines at least four main relevant information systems into a single portal..."
+            },
+            "visitSite" : "Visit Site"
+        },
+        "faq" : {
+            "title" : "Frequently Asked Questions",
+            "question1": "Does CamDX store the data?",
+            "answer1": "No. Security Servers at both side of communication do asymetric key encryption and digital signature that even CamDX cannot see or temper the content of the data exchange between two systems.",
+            "question2": "Why do I have to use CamDX if VPN can secure the channel?",
+            "answer2": "Answer 2",
+            "question3": "Where is CamDX?",
+            "answer3": "Answer 3",
+            "question4": "What kind of services that CamDX can offer?",
+            "answer4": "Answer 4",
+            "question5": "How to join CamDX",
+            "answer5": "Answer 5",
+            "question6": "What are the benefit of joining CamDX?",
+            "answer6": "Answer 6"
+        },
+        "contact" : {
+            "title" : "Contact Us",
+            "subtitle" : "We are happy to discuss with you whether you want to find more information or you want to join CamDX.",
+            "detail1" : "ADDRESS",
+            "subdetail1" : "Ministry of Economy and Finance <br> St.92, Wat Phnom, Daun Penh, Phnom Penh, Cambodia",
+            "detail2" : "CALL US",
+            "subdetail2" : "(855) 81 888 296",
+            "detail3" : "EMAIL US",
+            "subdetail3" : "camdx@mef.gov.kh<br>registrationservices@mef.gov.kh",
+            "detail4" : "WORKING HOURS",
+            "subdetail4" : "Mon - Fri: 8AM to 5PM <br>Except Public Holidays"
+        }
+    },
+    "obrPage" : {
+        "maintitle": "a Mobile Authentication Application",
+        "subtitle": "CamDigiKey is a secure yet easy mobile application to authenticate oneself digitally to access to various government digital services running through CamDX. Users must register to obtain valid digital identity. To login, users simply use the application to scan the QR code appeared in the login screen of the government portals. Online Business Registration is the first government portal that uses CamDigiKey to authenticate the user digital identity.",
+        "newfeature" : {
+            "title" : "New Features",
+            "content1" : "Liveness face detection",
+            "content2" : "Machine readable zone (MRZ) code reading",
+            "content3" : "App-to-app integration",
+            "content4" : "Web-to-web integration"
+
+        },
+        "devguide": "Development integration guides:",
+        "howto" : {
+            "question1": "How to Create an Account on CamDigiKey?",
+            "answer1": "Go to CamDigiKey application, click the \"Register\" button and follow the instructions on the application.",
+            "question2": "How to Recover Your Existing Account on CamDigiKey?",
+            "answer2": "Click the \"Recovery Existing Account\" button, then enter the mobile phone number that you registered with the CamDigiKey application and enter the OTP code sent to the mobile phone number. Complete the process by going through some security steps including your personalized 6-digit pin code or biometric authentication and liveness face detection.",
+            "question3": "How to Log into Portal/App with CamDigiKey?",
+            "answer3": "<b>Web-based:</b> Go to a website that has been integrated with CamDigiKey application and scan the QR code that is shown on the website.<br><br><b>App-based:</b> Go to a mobile application that has been integrated with CamDigiKey application. After you click the “Login” button in the mobile application, you will receive a confirmation/rejection notification in the CamDigiKey application. Enter your personalized 6-digit pin code or biometric authentication to complete."
+        }
+    }
 }

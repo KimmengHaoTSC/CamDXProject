@@ -5,7 +5,7 @@
           <v-col cols="12" md="6" class="d-flex align-center mb-6">
             <v-row>
               <div class="text-h3 bold mb-10">
-                {{ $t('mainTitle') }}
+                {{ $t('homePage.mainTitle') }}
               </div>
               <div class="text-h6">
                 Securely allow multi-lateral data exchange between different

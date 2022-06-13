@@ -4,7 +4,7 @@
             <v-row>
                 <v-col cols="12">
                     <div class="text-h3 bold font-weight-medium text-center">
-                        Frequently Asked Questions
+                        {{ $t('homePage.faq.title') }}
                     </div>
                 </v-col>
             </v-row>
@@ -16,13 +16,13 @@
 
                             <template #activator>
                                 <v-list-item-content>
-                                    <v-list-item-title class="indigo--text">{{ item.question }}</v-list-item-title>
+                                    <v-list-item-title class="indigo--text">{{ $t(item.question) }}</v-list-item-title>
                                 </v-list-item-content>
                             </template>
 
                             <v-list-item>
                                 <v-list-item-content>
-                                    {{ item.answer }}
+                                    {{ $t(item.answer) }}
                                 </v-list-item-content>
                             </v-list-item>
                         </v-list-group>
@@ -39,28 +39,28 @@ export default {
     data: () => ({
         items: [
             {
-                question: 'Does CamDX store the data?',
-                answer: 'No. Security Servers at both side of communication do asymetric key encryption and digital signature that even CamDX cannot see or temper the content of the data exchange between two systems.',
+                question: 'homePage.faq.question1',
+                answer: 'homePage.faq.answer1',
             },
             {
-                question: 'Why do I have to use CamDX if VPN can secure the channel?',
-                answer: 'Attractions',
+                question: 'homePage.faq.question2',
+                answer: 'homePage.faq.answer2',
             },
             {
-                question: 'Where is CamDX?',
-                answer: 'Attractions',
+                question: 'homePage.faq.question3',
+                answer: 'homePage.faq.answer3',
             },
             {
-                question: 'What kind of services that CamDX can offer?',
-                answer: 'Attractions',
+                question: 'homePage.faq.question4',
+                answer: 'homePage.faq.answer4',
             },
             {
-                question: 'How to join CamDX?',
-                answer: 'Attractions',
+                question: 'homePage.faq.question5',
+                answer: 'homePage.faq.answer5',
             },
             {
-                question: 'What are the benefit of joining CamDX?',
-                answer: 'Attractions',
+                question: 'homePage.faq.question6',
+                answer: 'homePage.faq.answer6',
             },
         ],
     }),

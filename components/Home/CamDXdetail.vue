@@ -7,19 +7,10 @@
                 <v-col cols="12" md="6" class="d-flex align-center mb-6" align="center">
                     <v-row>
                         <div class="text-h3 bold mb-4 font-weight-medium">
-                            What is CamDX?
+                            {{ $t('homePage.camdxDetail.whatisCamDX') }}
                         </div>
                         <div class="text-h6 mb-4 text-justify">
-
-                            CamDX stands for Cambodia Data eXchange, which adopts the model of X-Road of
-                            Estonia. CamDX
-                            is a
-                            unified yet decentralized data exchange layer between information systems that
-                            offers a
-                            standardized and secure way to provide and consume services. CamDX ensures
-                            confidentiality,
-                            integrity, and interoperability between a multitude of different data exchange
-                            parties.
+                            {{ $t('homePage.camdxDetail.isCamDX') }}
                         </div>
                     </v-row>
                 </v-col>

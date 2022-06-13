@@ -4,14 +4,12 @@
             <v-row>
                 <v-col cols="12">
                     <div class="text-h3 bold font-weight-medium text-center">
-                        Security of Data Exchange
+                        {{ $t('homePage.exchange.title') }}
                     </div>
                 </v-col>
                 <v-col cols="12">
                     <div class="text-md subtitle md-2 text-center">
-                        A CamDX member does not require to develop its own solution ensuring the security and privacy of
-                        the data. In CamDX, security of data exchange is ensured by distributed architecture, security
-                        server and the use of standard technology.
+                        {{ $t('homePage.exchange.subtitle') }}
                     </div>
                 </v-col>
             </v-row>
@@ -27,10 +25,10 @@
                                             width="100"></v-img>
                                     </v-card-title>
                                     <v-card-text class="text-h5 font-weight-bold text-center">
-                                        {{ item.title }}
+                                        {{ $t(item.title) }}
                                     </v-card-text>
                                     <v-card-text class="text-md text-center">
-                                        {{ item.meaning }}
+                                        {{ $t(item.meaning) }}
                                     </v-card-text>
                                     </div>
                             </v-col>
@@ -48,18 +46,18 @@ export default {
         items: [
             {
                 icon: 'exchange1',
-                title: 'Confidentiality',
-                meaning: 'Guaranteed with the condition that encrypted data are exchanged directly between members and do not pass through any third parties.',
+                title: 'homePage.exchange.confidentiality.title',
+                meaning: 'homePage.exchange.confidentiality.meaning',
             },
             {
                 icon: 'exchange2',
-                title: 'Availability',
-                meaning: 'data exchange is practically independent of CamDX and its core components.',
+                title: 'homePage.exchange.availability.title',
+                meaning: 'homePage.exchange.availability.meaning',
             },
             {
                 icon: 'exchange3',
-                title: 'Integrity',
-                meaning: 'CamDX is a distributed system with no central database performing only data exchange.',
+                title: 'homePage.exchange.integrity.title',
+                meaning: 'homePage.exchange.integrity.meaning',
             },
         ]
     })

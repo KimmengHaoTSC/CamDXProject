@@ -4,13 +4,12 @@
             <v-row>
                 <v-col cols="12">
                     <div class="text-h3 bold font-weight-medium text-center">
-                        CamDigiKey, a Mobile Authentication Application
+                        {{ $t('homePage.camdigikey.title') }}
                     </div>
                 </v-col>
                 <v-col cols="12">
                     <div class="text-md subtitle md-2 text-center">
-                        A secure yet easy mobile application to authenticate oneself digitally to access to various
-                        government digital services running through CamDX.
+                        {{ $t('homePage.camdigikey.subtitle') }}
                     </div>
                 </v-col>
             </v-row>
@@ -22,13 +21,7 @@
                     <v-row>
                         <v-col cols="12">
                             <div class="text-h6 mb-4">
-                                Users must register to obtain valid digital identity. To login, users simply use the
-                                application
-                                to scan the QR code appeared in the login screen of the government portals. Online
-                                Business
-                                Registration is the first government portal that uses CamDigiKey to authenticate the
-                                user
-                                digital identity.
+                                {{ $t('homePage.camdigikey.content') }}
                             </div>
                         </v-col>
                         <v-col cols="12" md="4" sm="12" xs="12">

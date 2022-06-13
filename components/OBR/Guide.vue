@@ -28,7 +28,7 @@
             <v-row>
                 <v-col cols="12">
                     <div class="md-2 text-center">
-                        Development integration guides:
+                        {{ $t('obrPage.devguide') }}
                     </div>
                 </v-col>
             </v-row>

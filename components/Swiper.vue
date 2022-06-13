@@ -10,10 +10,24 @@
                 height="100"
                 :src="require('assets/' + item.icon + '.png')"
                 rel="preload"
-              ></v-img>
+              >
+                <template #placeholder>
+                  <v-row
+                    class="fill-height ma-0"
+                    align="center"
+                    justify="center"
+                  >
+                   <v-skeleton-loader
+                      class="mx-auto"
+                      max-width="300"
+                      type="card"
+                    ></v-skeleton-loader>
+                  </v-row>
+                </template>
+              </v-img>
             </v-col>
             <v-col cols="12" align="center">
-              {{ item.title }}
+              {{ $t(item.title) }}
             </v-col>
           </v-row>
         </div>

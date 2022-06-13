@@ -5,26 +5,34 @@
                 <v-row class="pb-5">
                     <v-col cols="12">
                         <div class="text-h3 bold font-weight-medium text-center">
-                            Services Run Through CamDX
+                            {{ $t('homePage.servicerun.title') }}
                         </div>
                     </v-col>
                 </v-row>
                 <v-col>
                     <v-row align="center">
                         <v-col v-for="(item, index) in items" :key="index" cols="12" md="4" sm="12">
-                            <v-card class="card-cus justify-center box pa-1 " light height="350px">
+                            <v-card class="card-cus justify-center box pa-1" light height="400px">
                                 <v-card color="primary" class="rounded-lg" height="200" dark>
                                     <v-card-title>
                                     </v-card-title>
                                     <v-card-text class="text-h5 font-weight-bold " color="white">
-                                        {{ item.title }}
+                                        {{ $t(item.title) }}
                                     </v-card-text>
                                 </v-card>
                                 <v-card-text class="text-md">
-                                    {{ item.meaning }}
+                                    {{ $t(item.meaning) }}
                                 </v-card-text>
+                                <v-card-actions class="float-right">
+                                    <v-btn
+                                        text
+                                        class="text-capitalize"
+                                    >
+                                        {{ $t('homePage.servicerun.visitSite') }}
+                                        <v-icon>mdi-arrow-right-thin</v-icon>
+                                    </v-btn>
+                                </v-card-actions>
                             </v-card>
-
                         </v-col>
                     </v-row>
                 </v-col>
@@ -40,18 +48,18 @@ export default {
         items: [
             {
                 image: 'service1',
-                title: 'Online Business Registration',
-                meaning: 'a new business registration platform that combines at least four main relevant information systems into a single portal...',
+                title: "homePage.servicerun.onlineBusiness.title",
+                meaning: "homePage.servicerun.onlineBusiness.meaning",
             },
             {
                 image: 'service2',
-                title: 'Global Travel Assessment System ',
-                meaning: 'a new business registration platform that combines at least four main relevant information systems into a single portal...',
+                title: "homePage.servicerun.globaltravel.title",
+                meaning: "homePage.servicerun.globaltravel.meaning",
             },
             {
                 image: 'service3',
-                title: 'Validation Application on Guarantee/Invitation',
-                meaning: 'a new business registration platform that combines at least four main relevant information systems into a single portal...',
+                title: "homePage.servicerun.validation.title",
+                meaning: "homePage.servicerun.validation.meaning",
             },
         ]
     })
