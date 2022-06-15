@@ -1,5 +1,5 @@
 <template>
-    <v-card  class="rounded-0 pa-10" light>
+    <v-card  class="rounded-0 pa-5" light>
         <v-container>
             <v-row v-for="(item, index) in items" :key="index" class="pa-5">
                 <v-col cols="12">
@@ -9,11 +9,11 @@
                 </v-col>
                 <v-col cols="12">
                     <!-- eslint-disable vue/no-v-html -->
-                    <div class="text-md" v-html=$t(item.answer)>
+                    <div class="text-md" v-html='$t(item.answer)'>
                     <!-- eslint-disable vue/no-v-html -->
                     </div>
                 </v-col>
-                <v-col cols="12" data-aos="zoom-out-right">
+                <v-col cols="12" data-aos="zoom-in">
                 <v-img :contain="true"  height="500" :src="require('assets/' + item.image + '.png')">
                         </v-img>
                 </v-col>

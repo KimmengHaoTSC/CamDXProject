@@ -1,5 +1,5 @@
 <template>
-    <v-card color="#F8F9FA" class="rounded-0 pa-10" light>
+    <v-card class="rounded-0 pa-5 greybackground" light>
         <v-container>
             <v-row>
                 <v-col cols="12">
@@ -14,12 +14,13 @@
                 </v-col>
             </v-row>
             <v-col>
-                <v-card color="#16184E" dark class="rounded-xl pa-md-5">
+                <v-card class="rounded-xl pa-md-5 backgroundTheme" dark >
                     <v-card-text v-for="(item, index) in items" :key="index">
                         <v-row>
                             <v-col cols="12" md="2" sm="2" xs="12">
                                 <div data-aos="fade-right">
-                                    <v-img :src="require('assets/' + item.icon + '.png')" :contain="true"
+                                    <v-img 
+                                        :src="require('assets/' + item.icon + '.png')" :contain="true"
                                         max-height="100px">
                                     </v-img>
                                 </div>

@@ -1,32 +1,19 @@
 <template>
   <client-only>
-    <div ref="swiper" class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div v-for="(item, i) in items" :key="i" class="swiper-slide">
+    <div ref="swiper" class="swiper mySwiper text-center">
+      <div class="swiper-wrapper" >
+        <div v-for="(item, i) in items" :key="i" class="swiper-slide pt-5">
           <v-row>
-            <v-col cols="12" align="center">
-              <v-img
-                :contain="true"
-                height="100"
-                :src="require('assets/' + item.icon + '.png')"
-                rel="preload"
-              >
+            <v-col cols="12">
+              <v-img :contain="true" height="100" :src="require('assets/' + item.icon + '.png')" rel="preload">
                 <template #placeholder>
-                  <v-row
-                    class="fill-height ma-0"
-                    align="center"
-                    justify="center"
-                  >
-                   <v-skeleton-loader
-                      class="mx-auto"
-                      max-width="300"
-                      type="card"
-                    ></v-skeleton-loader>
+                  <v-row class="fill-height ma-0">
+                    <v-skeleton-loader class="mx-auto" max-width="300" type="card"></v-skeleton-loader>
                   </v-row>
                 </template>
               </v-img>
             </v-col>
-            <v-col cols="12" align="center">
+            <v-col cols="12" class="text-center">
               {{ $t(item.title) }}
             </v-col>
           </v-row>
@@ -52,50 +39,44 @@ export default {
     await this.$nextTick()
     /* eslint-disable no-new */
     new Swiper(this.$refs.swiper, {
-      freeMode: true,
-      centeredSlides: true,
+      slidesPerView: 3,
+      initialSlide: 4,
       autoplay: {
         delay: 2500,
         disableOnInteraction: false,
       },
-      lazy: 'true',
-      slidesPerView: 3,
-      spaceBetween: 40,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+        freeMode: true,
+      speed: 1000,
+      spaceBetween: 20,
+      // roundLengths: true,
+      // mousewheel: true,
+      grabCursor: true,
     })
   },
 }
 </script>
 
-<style>
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
+<style lang="scss">
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
+  
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
 
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+  &.swiper-slide-active,
+  &.swiper-slide-duplicate-active {
+    .slide-image {
+      transform: scale3d(1, 1, 1);
+    }
+  }
 }
+
+.swiper-wrapper {
+  // enough width to have off screen slides partially visible     
+  // width: 73.8%;
+  will-change: transform;
+
+}
+
 </style>

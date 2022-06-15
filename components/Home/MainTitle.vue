@@ -1,5 +1,5 @@
 <template>
-  <v-card color="#16184E" width="100%" class="rounded-0 pa-10">
+  <v-card class="rounded-0 pa-5 backgroundTheme">
     <v-container>
         <v-row data-aos="fade-up" data-aos-duration="800">
           <v-col cols="12" md="6" class="d-flex align-center mb-6">

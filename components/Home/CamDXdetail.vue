@@ -1,7 +1,7 @@
 <template>
 
     <!-- <section id="title"> -->
-    <v-card light class="rounded-0 pa-10" outlined>
+    <v-card light class="rounded-0 pa-5" outlined>
         <v-container>
             <v-row>
                 <v-col cols="12" md="6" class="d-flex align-center mb-6" align="center">

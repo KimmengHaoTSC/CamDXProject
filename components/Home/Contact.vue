@@ -1,5 +1,5 @@
 <template>
-    <v-card class="rounded-0 pa-10" light>
+    <v-card class="rounded-0 pa-5" light>
         <v-container>
             <v-row >
                 <v-col cols="12">
@@ -17,7 +17,7 @@
                 <v-row >
                     <v-col v-for="(item, index) in items" :key="index" cols="12" md="6" sm="12">
                         <div data-aos="zoom-in-up" data-aos-duration="1000">
-                            <v-card color="#F8F9FA" height="300px">
+                            <v-card class="greybackground" height="300px">
                                 <v-card-title>
                                     <v-img 
                                         :contain="true" height="100" :src="require('assets/' + item.icon + '.png')"
@@ -26,8 +26,9 @@
                                 <v-card-text class="text-h5 font-weight-bold text-center">
                                     {{ $t(item.title) }}
                                 </v-card-text>
-                                <v-card-text class="text-md text-center" v-html=$t(item.meaning)>
-                                    <!-- {{  }} -->
+                                <!-- eslint-disable vue/no-v-html -->
+                                <v-card-text class="text-md text-center" v-html='$t(item.meaning)'>
+                                <!-- eslint-disable vue/no-v-html -->
                                 </v-card-text>
                             </v-card>
                         </div>

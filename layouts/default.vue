@@ -1,10 +1,10 @@
 <template>
   <v-app dark>
-    <SiteHeader />
+    <AppBar />
     <v-btn
       v-show="fab"
       v-scroll="onScroll"
-      class="fb-btn"
+      class="backgroundTheme fb-btn"
       fab
       dark
       fixed
@@ -12,7 +12,6 @@
       filled
       bottom
       right
-      color="#16184E"
       @click="toTop"
     >
       <v-icon>mdi-arrow-up</v-icon>
@@ -25,12 +24,12 @@
 </template>
 
 <script>
+import AppBar from '../components/AppBar.vue'
 import Footer from '../components/Footer.vue'
-import SiteHeader from '../components/AppBar.vue'
 
 export default {
   name: 'DefaultLayoutPage',
-  components: { Footer, SiteHeader },
+  components: { AppBar, Footer },
   data() {
     return {
       clipped: false,
@@ -72,5 +71,19 @@ export default {
 <style>
 .fb-btn.v-btn {
   border: thin solid #ffffff !important;
+}
+.v-application {
+  font-family: 'Hanuman', cursive !important;
+}
+.title {
+  font-size: large;
+}
+.subtitle {
+  font-size: medium;
+}
+
+.listItem {
+  background: #26296c !important;
+  opacity: 0.98;
 }
 </style>

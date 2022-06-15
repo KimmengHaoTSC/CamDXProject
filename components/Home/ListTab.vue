@@ -1,24 +1,24 @@
 <template>
-  <v-tabs
-    class="white"
-    centered
-    light
-    show-arrows
-    :hide-slider="true"
-  >
-    <v-tab
-      v-for="(item, index) in items"
-      :key="index"
-      class="text-capitalize"
-      @click="$vuetify.goTo('#' + item.to)"
-    >
-      {{ item.label }}
-    </v-tab>
-  </v-tabs>
+  <v-container 
+      style="margin-top: 250px;" data-aos="fade-down" 
+      data-aos-duration="800">
+        <v-list class="listItem" >
+          <v-list-item 
+            
+            v-for="(item, i) in items"
+            :key="i" 
+            @click="$vuetify.goTo('#' + item.to)"
+          >
+            <v-list-item-title data-aos="fade-left">{{ $t(item.label) }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-container>
+
+
 </template>
 <script>
 export default {
-  name: 'TabPage',
+  name: 'ListTabPage',
   data() {
     return {
       isIntersecting: false,
@@ -50,19 +50,5 @@ export default {
       ],
     }
   },
-  methods: {},
 }
 </script>
-<style>
-.tabfont {
-  color: black;
-}
-
-.v-tab.v-tab--active::before {
-  opacity: 0 !important;
-}
-
-#custom-tab-items {
-  background-color: transparent !important;
-}
-</style>

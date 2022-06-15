@@ -1,5 +1,5 @@
 <template>
-    <v-card class="pa-10" dark color="#16184E">
+    <v-card class="pa-5 backgroundTheme" dark>
         <v-container>
             <v-row justify="center">
                 <v-col cols="6">

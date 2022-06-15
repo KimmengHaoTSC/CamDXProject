@@ -1,5 +1,5 @@
 <template>
-    <v-card color="#F8F9FA" class="rounded-0 pa-10" light>
+    <v-card class="rounded-0 pa-5 greybackground" light>
         <v-container>
             <v-row>
                 <v-col cols="12">
@@ -16,7 +16,7 @@
 
                             <template #activator>
                                 <v-list-item-content>
-                                    <v-list-item-title class="indigo--text">{{ $t(item.question) }}</v-list-item-title>
+                                    <div class="indigo--text">{{ $t(item.question) }}</div>
                                 </v-list-item-content>
                             </template>
 

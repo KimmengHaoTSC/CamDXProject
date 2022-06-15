@@ -1,5 +1,5 @@
 <template>
-    <v-card color="#F8F9FA" class="rounded-0 pa-10" light>
+    <v-card class="rounded-0 pa-5 greybackground" light>
         <v-container>
             <v-card color="#C5C5C4" light class="bt-15" height="300"></v-card>
             <v-row>

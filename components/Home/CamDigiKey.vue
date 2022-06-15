@@ -1,5 +1,5 @@
 <template>
-    <v-card class="rounded-0 pa-10" dark color="#16184E">
+    <v-card class="rounded-0 pa-5 backgroundTheme" dark>
         <v-container>
             <v-row>
                 <v-col cols="12">
@@ -20,12 +20,13 @@
                 <v-col col="12" md="8" sm="6" xs="12">
                     <v-row>
                         <v-col cols="12">
-                            <div class="text-h6 mb-4">
+                            <div class="text-h6 mb-4 text-justify">
                                 {{ $t('homePage.camdigikey.content') }}
                             </div>
                         </v-col>
                         <v-col cols="12" md="4" sm="12" xs="12">
-                            <v-btn width="100%"
+                            <v-btn 
+                                width="100%"
                                 :class="[(hoverAndroid ? 'foo-hover-true' : 'foo-hover-false') + ' text-capitalize']"
                                 @mouseover="hoverAndroid = true" @mouseleave="hoverAndroid = false">
                                 <v-icon class="mr-4">mdi-google-play</v-icon>
@@ -33,14 +34,16 @@
                             </v-btn>
                         </v-col>
                         <v-col cols="12" md="4" sm="12" xs="12">
-                            <v-btn :class="[(hoverApple ? 'foo-hover-true' : 'foo-hover-false') + ' text-capitalize']"
+                            <v-btn 
+                                :class="[(hoverApple ? 'foo-hover-true' : 'foo-hover-false') + ' text-capitalize']"
                                 width="100%" @mouseover="hoverApple = true" @mouseleave="hoverApple = false">
                                 <v-icon class="mr-4">mdi-apple</v-icon>
                                 iOS
                             </v-btn>
                         </v-col>
                         <v-col cols="12" md="4" sm="12" xs="12">
-                            <v-btn light width="100%" outlined
+                            <v-btn 
+                                light width="100%" outlined
                                 :class="[(hovered ? 'foo-hover-false' : 'foo-hover-true') + ' text-capitalize']"
                                 @mouseover="hovered = true" @mouseleave="hovered = false">
                                 Learn More

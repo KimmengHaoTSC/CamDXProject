@@ -1,5 +1,5 @@
 <template>
-    <v-card class="rounded-0 pa-10" light>
+    <v-card class="rounded-0 pa-5" light>
         <v-container>
             <v-row>
                 <v-col cols="12">

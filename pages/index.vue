@@ -3,11 +3,9 @@
     <MainTitle></MainTitle>
     <section id="overview">
       <Tab></Tab>
-
       <CamDXdetail></CamDXdetail>
       <MainGoal></MainGoal>
     </section>
-
     <section id="principles">
       <DesignProperty></DesignProperty>
       <MainComponent></MainComponent>
@@ -33,7 +31,7 @@
 <script>
 import Tab from '../components/Home/Tab.vue'
 import CamDXdetail from '../components/Home/CamDXdetail.vue'
-import DesignProperty from '../components/Home/DesignProperty.vue'
+import DesignProperty from '../components/Home/DesignPrinciples.vue'
 import MainComponent from '../components/Home/MainComponent.vue'
 import SecureServer from '../components/Home/SecureServer.vue'
 import ExchangeData from '../components/Home/ExchangeData.vue'
@@ -60,10 +58,7 @@ export default {
     Partner,
     FAQ,
     Contact,
-  },
-  data: () => ({
-    expand2: false,
-  }),
+  }
 }
 </script>
 

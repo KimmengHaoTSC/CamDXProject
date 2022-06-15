@@ -1,5 +1,5 @@
 <template>
-    <v-card class="rounded-0 pa-10" light>
+    <v-card class="rounded-0 pa-5" light>
         <v-container>
             <v-row>
                 <v-col cols="12">
@@ -18,12 +18,12 @@
                     <v-col v-for="(item, index) in messages" :key="index" cols="12" md="4" sm="6" xs="6">
                     <div data-aos="flip-left">
 
-                        <v-card-text>
+                        <v-card-text align="center">
                             <v-img 
                                 :contain="true" height="100" :src="require('assets/' + item.avatar + '.png')"
                                 width="100"></v-img>
                         </v-card-text>
-                        <v-card-text class="text-h5 font-weight-bold">
+                        <v-card-text class="text-h5 font-weight-bold" align="center">
                             {{ $t(item.title) }}
                         </v-card-text>
                         <v-card-text class="text-md">
@@ -37,7 +37,7 @@
 </template>
 <script>
 export default {
-    name: 'DesignPropertypage',
+    name: 'DesignPrinciplepage',
     data: () => ({
         messages: [
             {
