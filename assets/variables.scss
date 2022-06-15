@@ -2,12 +2,39 @@
 //
 // The variables you want to modify
 @import url('https://fonts.googleapis.com/css2?family=Hanuman&display=swap');
-
 $font-family: 'Hanuman', cursive;
 
 .v-application {
   [class*='text-'] {
     font-family: $font-family  !important;
   }
-  *font-family: $font-family !important;
+  font-family: $font-family !important;
+}
+
+.maintitleSize {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.titleSize {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.subtitleSize {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 150%;
+}
+
+.textSize {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.v-btn.v-size--default {
+  font-size: 15px;
 }

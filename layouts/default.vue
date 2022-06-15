@@ -72,16 +72,6 @@ export default {
 .fb-btn.v-btn {
   border: thin solid #ffffff !important;
 }
-.v-application {
-  font-family: 'Hanuman', cursive !important;
-}
-.title {
-  font-size: large;
-}
-.subtitle {
-  font-size: medium;
-}
-
 .listItem {
   background: #26296c !important;
   opacity: 0.98;
