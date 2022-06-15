@@ -7,7 +7,7 @@
             
             v-for="(item, i) in items"
             :key="i" 
-            @click="$vuetify.goTo('#' + item.to)"
+            @click="$vuetify.goTo('#' + item.to, scrollOptions)"
           >
             <v-list-item-title data-aos="fade-left">{{ $t(item.label) }}</v-list-item-title>
           </v-list-item>
@@ -17,6 +17,8 @@
 
 </template>
 <script>
+import {  mapGetters } from 'vuex'
+
 export default {
   name: 'ListTabPage',
   data() {
@@ -50,5 +52,8 @@ export default {
       ],
     }
   },
+  computed: {
+    ...mapGetters({scrollOptions: 'scroll/scrollOptions'})
+  }
 }
 </script>

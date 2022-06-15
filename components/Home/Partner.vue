@@ -1,7 +1,7 @@
 <template>
   <v-card class="pa-5 backgroundTheme" dark>
     <v-container>
-        <div class="text-h3 font-weight-medium text-center pb-5">
+        <div class="titleSize pb-5">
           Our Partners
         </div>
           <Swiper :items="items" />

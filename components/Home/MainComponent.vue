@@ -3,12 +3,12 @@
         <v-container>
             <v-row>
                 <v-col cols="12">
-                    <div class="text-h3 font-weight-medium text-center">
+                    <div class="titleSize text-center">
                         {{ $t('homePage.components.title') }}
                     </div>
                 </v-col>
                 <v-col cols="12">
-                    <div class="text-md subtitle md-2 text-center">
+                    <div class="subtitleSize md-2 text-center">
                         {{ $t('homePage.components.subtitle') }}
                     </div>
                 </v-col>
@@ -27,10 +27,10 @@
                             </v-col>
                             <v-col cols="12" md="10" sm="10" xs="12">
                                 <div>
-                                    <div class="text-h6 mb-4 font-weight-medium">
+                                    <div class="subtitleSize font-weight-bold mb-4  text-left">
                                         {{ $t(item.title) }}
                                     </div>
-                                    <div class="text-md mb-4 text-justify">
+                                    <div class="textSize mb-4 text-justify">
                                         {{ $t(item.meaning) }}
                                     </div>
                                 </div>
@@ -66,27 +66,3 @@ export default {
     })
 }
 </script>
-<style>
-.topbelow {
-    top: 50%;
-    bottom: 50%
-}
-
-.font-title {
-
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 150%;
-}
-
-.subtitle {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 150%;
-    text-align: center;
-}
-</style>

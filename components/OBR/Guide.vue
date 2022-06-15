@@ -27,7 +27,7 @@
 
             <v-row>
                 <v-col cols="12">
-                    <div class="md-2 text-center">
+                    <div class="md-2 textSize text-center">
                         {{ $t('obrPage.devguide') }}
                     </div>
                 </v-col>
@@ -72,7 +72,7 @@ export default {
             },
             {
                 icon: 'mdi-apple',
-                label: 'IOS',
+                label: ' iOS',
                 link: '',
                 variable : 'hover3'
             },

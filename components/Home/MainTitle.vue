@@ -4,10 +4,10 @@
         <v-row data-aos="fade-up" data-aos-duration="800">
           <v-col cols="12" md="6" class="d-flex align-center mb-6">
             <v-row>
-              <div class="text-h3 bold mb-10">
+              <div class="maintitleSize mb-10">
                 {{ $t('homePage.mainTitle') }}
               </div>
-              <div class="text-h6">
+              <div class="subtitleSize text-left">
                 Securely allow multi-lateral data exchange between different
                 information systems over the Internet.
               </div>
@@ -40,7 +40,7 @@ export default {
 }
 </script>
 <style>
-.font-title {
+/* .font-title {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -54,5 +54,5 @@ export default {
   font-weight: 400;
   font-size: 24px;
   line-height: 150%;
-}
+} */
 </style>

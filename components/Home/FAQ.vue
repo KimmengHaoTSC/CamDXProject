@@ -3,7 +3,7 @@
         <v-container>
             <v-row>
                 <v-col cols="12">
-                    <div class="text-h3 bold font-weight-medium text-center">
+                    <div class="titleSize">
                         {{ $t('homePage.faq.title') }}
                     </div>
                 </v-col>
@@ -16,12 +16,12 @@
 
                             <template #activator>
                                 <v-list-item-content>
-                                    <div class="indigo--text">{{ $t(item.question) }}</div>
+                                    <div class="subtitleSize text-left">{{ $t(item.question) }}</div>
                                 </v-list-item-content>
                             </template>
 
                             <v-list-item>
-                                <v-list-item-content>
+                                <v-list-item-content class="textSize">
                                     {{ $t(item.answer) }}
                                 </v-list-item-content>
                             </v-list-item>

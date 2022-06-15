@@ -13,7 +13,7 @@
                 </template>
               </v-img>
             </v-col>
-            <v-col cols="12" class="text-center">
+            <v-col cols="12" class="textSize">
               {{ $t(item.title) }}
             </v-col>
           </v-row>
@@ -39,13 +39,12 @@ export default {
     await this.$nextTick()
     /* eslint-disable no-new */
     new Swiper(this.$refs.swiper, {
-      slidesPerView: 3,
-      initialSlide: 4,
+        slidesPerView: 3,
       autoplay: {
         delay: 2500,
         disableOnInteraction: false,
       },
-        freeMode: true,
+        // freeMode: true,
       speed: 1000,
       spaceBetween: 20,
       // roundLengths: true,

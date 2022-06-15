@@ -3,13 +3,13 @@
         <v-container>
             <v-row v-for="(item, index) in items" :key="index" class="pa-5">
                 <v-col cols="12">
-                    <div class="text-h3 bold font-weight-medium">
+                    <div class="titleSize text-left">
                         {{$t(item.question)}}
                     </div>
                 </v-col>
                 <v-col cols="12">
                     <!-- eslint-disable vue/no-v-html -->
-                    <div class="text-md" v-html='$t(item.answer)'>
+                    <div class="subtitleSize text-left" v-html='$t(item.answer)'>
                     <!-- eslint-disable vue/no-v-html -->
                     </div>
                 </v-col>

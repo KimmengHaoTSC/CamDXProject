@@ -6,19 +6,19 @@
       </v-col>
       <v-divider />
       <v-list>
-        <v-list-item-group v-for="(item, i) in items" :key="i" color="primary">
+        <v-list-item-group v-for="(item, i) in items" :key="i">
           <v-list-item v-if="!item.submenu" :to="item.to">
             <!-- <v-list-item-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-action> -->
             <v-list-item-content>
-              <v-list-item-title v-text=$t(item.title) />
+              <v-list-item-title class="textSize" v-text=$t(item.title) />
             </v-list-item-content>
           </v-list-item>
           <v-list-group v-else :prepend-icon="item.icon" no-action>
             <template #activator>
               <v-list-item-content>
-                <v-list-item-title v-text=$t(item.title)></v-list-item-title>
+                <v-list-item-title class="textSize" v-text=$t(item.title)></v-list-item-title>
               </v-list-item-content>
             </template>
             <v-list-item v-for="(child, index) in item.submenu" :key="index" :to="child.to">
@@ -34,7 +34,7 @@
           </v-list-item-icon>
 
           <v-list-item-content>
-            <v-list-item-title>{{ $t('language') }}</v-list-item-title>
+            <v-list-item-title class="textSize" >{{ $t('language') }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>

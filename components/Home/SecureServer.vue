@@ -3,12 +3,12 @@
         <v-container>
             <v-row>
                 <v-col cols="12">
-                    <div class="text-h3 font-weight-medium text-center">
+                    <div class="titleSize">
                         {{ $t('homePage.secureserver.title') }}
                     </div>
                 </v-col>
                 <v-col cols="12">
-                    <div class="text-md subtitle md-2 text-center">
+                    <div class="subtitleSize md-2">
                         {{ $t('homePage.secureserver.subtitle') }}
                     </div>
                 </v-col>
@@ -20,7 +20,7 @@
                             <v-img :src="require('assets/point.png')" :contain="true" width="30" height="30">
                             </v-img>
                         </v-col>
-                        <v-col cols="10" md="11" sm="11" xs="11">
+                        <v-col cols="10" md="11" sm="11" xs="11" class="textSize">
                             {{ $t(item) }}
                         </v-col>
                     </v-row>
@@ -46,21 +46,3 @@ export default {
     })
 }
 </script>
-<style>
-.font-title {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 150%;
-}
-
-.subtitle {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 150%;
-    text-align: center;
-}
-</style>

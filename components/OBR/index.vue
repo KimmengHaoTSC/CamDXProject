@@ -2,19 +2,19 @@
   <v-card class="rounded-0 pa-5" light>
     <v-container>
       <v-col cols="12">
-        <div class="text-h3 bold font-weight-medium">
+        <div class="titleSize text-left">
           CamDigiKey, {{ $t('obrPage.maintitle') }}
         </div>
       </v-col>
       <v-col cols="12">
-        <div class="text-md">
+        <div class="subtitleSize text-left">
           {{ $t('obrPage.subtitle') }}
         </div>
       </v-col>
       <v-card color="#C5C5C4" light height="300"></v-card>
       <!-- <br /> -->
       <v-col cols="12">
-      <div class="ma-5 text-h3 font-weight-medium text-center">
+      <div class="ma-5 titleSize">
           {{ $t('obrPage.newfeature.title') }}
       </div>
       </v-col>

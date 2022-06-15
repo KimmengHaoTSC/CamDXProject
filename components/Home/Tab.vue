@@ -9,14 +9,15 @@
     <v-tab
       v-for="(item, index) in items"
       :key="index"
-      class="text-capitalize"
-      @click="$vuetify.goTo('#' + item.to)"
+      class="text-capitalize tabtextSize"
+      @click="$vuetify.goTo('#' + item.to, scrollOptions)"
     >
       {{ item.label }}
     </v-tab>
   </v-tabs>
 </template>
 <script>
+import {  mapGetters } from 'vuex'
 export default {
   name: 'TabPage',
   data() {
@@ -50,7 +51,9 @@ export default {
       ],
     }
   },
-  methods: {},
+  computed: {
+    ...mapGetters({scrollOptions: 'scroll/scrollOptions'})
+  }
 }
 </script>
 <style>
@@ -64,5 +67,8 @@ export default {
 
 #custom-tab-items {
   background-color: transparent !important;
+}
+.tabtextSize {
+  font-size: 15px;
 }
 </style>
