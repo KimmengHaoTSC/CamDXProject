@@ -16,10 +16,10 @@
                     <v-col cols="12" md="6" xs="12"  align="center">
                     <v-btn  
                         depressed filled width="100%"
-                        :class="[(hoverApple ? 'foo-hover-true' : 'foo-hover-false') + ' mr-1 text-capitalize']"
+                        :class="[(hoverApple ? 'foo-hover-true' : 'foo-hover-false') + ' mr-1 text-none']"
                         @mouseover="hoverApple = true" @mouseleave="hoverApple = false">
                         <v-icon class="mr-4">mdi-apple</v-icon>
-                        IOS
+                        iOS
                     </v-btn>
                 </v-col></v-row>
             </v-col>
@@ -37,7 +37,7 @@
                 <v-col v-for="(item, index) in buttonItem" :key="index" cols="12" md="3" sm="6" xs="12" align="center" class="text-center">
                     <v-btn 
                         depressed  width="100%" 
-                        :class="[(item.variable ? 'text-hover-true' : 'text-hover-false') + ' mr-1 text-capitalize']"
+                        :class="[(item.variable ? 'text-hover-true' : 'text-hover-false') + ' mr-1 text-none']"
                         @mouseover="item.variable = false" @mouseleave="item.variable = true">
                     <v-icon class="mr-4">{{item.icon}}</v-icon>
                        {{item.label}}

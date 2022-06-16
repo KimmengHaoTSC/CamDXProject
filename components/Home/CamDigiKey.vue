@@ -35,7 +35,7 @@
                         </v-col>
                         <v-col cols="12" md="4" sm="12" xs="12">
                             <v-btn 
-                                :class="[(hoverApple ? 'foo-hover-true' : 'foo-hover-false') + ' text-capitalize']"
+                                :class="[(hoverApple ? 'foo-hover-true' : 'foo-hover-false') + ' text-none']"
                                 width="100%" @mouseover="hoverApple = true" @mouseleave="hoverApple = false" >
                                 <v-icon class="mr-4">mdi-apple</v-icon>
                                 iOS
