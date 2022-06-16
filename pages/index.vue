@@ -7,7 +7,7 @@
       <MainGoal></MainGoal>
     </section>
     <section id="principles">
-      <DesignProperty></DesignProperty>
+      <DesignPrinciples></DesignPrinciples>
       <MainComponent></MainComponent>
       <SecureServer></SecureServer>
       <ExchangeData></ExchangeData>
@@ -31,7 +31,7 @@
 <script>
 import Tab from '../components/Home/Tab.vue'
 import CamDXdetail from '../components/Home/CamDXdetail.vue'
-import DesignProperty from '../components/Home/DesignPrinciples.vue'
+import DesignPrinciples from '../components/Home/DesignPrinciples.vue'
 import MainComponent from '../components/Home/MainComponent.vue'
 import SecureServer from '../components/Home/SecureServer.vue'
 import ExchangeData from '../components/Home/ExchangeData.vue'
@@ -48,7 +48,7 @@ export default {
     MainTitle,
     Tab,
     CamDXdetail,
-    DesignProperty,
+    DesignPrinciples,
     MainComponent,
     MainGoal,
     SecureServer,
