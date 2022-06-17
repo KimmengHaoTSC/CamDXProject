@@ -17,7 +17,7 @@
                 <v-row >
                     <v-col v-for="(item, index) in items" :key="index" cols="12" md="6" sm="12">
                         <div data-aos="zoom-in-up" data-aos-duration="700">
-                            <v-card class="greybackground" height="300px">
+                            <v-card class="greybackground" height="350px">
                                 <v-card-title>
                                     <v-img 
                                         :contain="true" height="100" :src="require('assets/' + item.icon + '.png')"
@@ -28,7 +28,6 @@
                                 </v-card-text>
                                 <!-- eslint-disable vue/no-v-html -->
                                 <v-card-text class="textSize text-center" v-html='$t(item.meaning)'>
-                                <!-- eslint-disable vue/no-v-html -->
                                 </v-card-text>
                             </v-card>
                         </div>
@@ -39,6 +38,7 @@
     </v-card>
 </template>
 <script>
+
 export default {
     name: 'FAQpage',
     data: () => ({
@@ -51,12 +51,12 @@ export default {
             {
                 icon: 'contact2',
                 title: 'homePage.contact.detail2',
-                meaning: 'homePage.contact.subdetail2',
+                meaning: "<a href=\"tel:(855) 81 888 296\" > (855) 81 888 296 </a>",
             },
             {
                 icon: 'contact3',
                 title: 'homePage.contact.detail3',
-                meaning: 'homePage.contact.subdetail3',
+                meaning: "<a href=\"mailto:camdx@mef.gov.kh\" > camdx@mef.gov.kh </a><br><br><a href=\"mailto:camdx@mef.gov.kh\" > registrationservices@mef.gov.kh </a>",
             },
             {
                 icon: 'contact3',
@@ -68,4 +68,8 @@ export default {
 }
 </script>
 <style>
+    
+a {
+  color: primary !important;
+}
 </style>

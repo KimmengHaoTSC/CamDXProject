@@ -14,7 +14,7 @@
             </v-row>
           </v-col>
           <v-col cols="12" md="6">
-            <v-img class="img-fluid" :src="require('@/assets/maintitle.png')">
+            <v-img class="img-fluid" :contain="true" max-height="500px" :src="require('@/assets/maintitle.png')">
             </v-img>
           </v-col>
         </v-row>

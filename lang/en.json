@@ -54,7 +54,7 @@
                 "meaning": "All communications in CamDX are based on web services, preferably REST API, and therefore can be used by all developers."
             },
             "last" : {
-                "title": "<br/>",
+                "title": "HETEROGENEOUS",
                 "meaning": "CamDX connects systems built on any platforms and technologies of choice."
             }
         },
@@ -125,27 +125,25 @@
             "question1": "Does CamDX store the data?",
             "answer1": "No. Security Servers at both side of communication do asymetric key encryption and digital signature that even CamDX cannot see or temper the content of the data exchange between two systems.",
             "question2": "Why do I have to use CamDX if VPN can secure the channel?",
-            "answer2": "Answer 2",
+            "answer2": "VPN is a technology to secure communication whereas CamDX is more than a software technology. CamDX bundles with infrastructure and more importantly regulations which define who can use what level of data. Technically, participating members of CamDX can access to all other systems run on CamDX, but the level of access to data is different and can be configured in Security Server.",
             "question3": "Where is CamDX?",
-            "answer3": "Answer 3",
+            "answer3": "CamDX is built and setup locally in the data center of Ministry of Economy and Finance.",
             "question4": "What kind of services that CamDX can offer?",
-            "answer4": "Answer 4",
+            "answer4": "CamDX facilitates data exchange between multiple systems. Any servers that require multiple engagement from different systems should consider to use CamDX. The first service to operate on CamDX is Online Business Registration which at the moment interacts four main systems.",
             "question5": "How to join CamDX",
-            "answer5": "Answer 5",
+            "answer5": "If you are a service provider, your information systems need to be open the APIs for accessibility. In that regard, please contact us, we will provide technical detail. If you are a service consummer, you need to provide us what kinds of service you would like to request. If the requested data is allowed by laws and regulations, you can join with us. In that sense, please also contact our interoperability team.",
             "question6": "What are the benefit of joining CamDX?",
-            "answer6": "Answer 6"
+            "answer6": "By joining CamDX, your information systems have been leveraged. You focus on your system while we do care for interoperability and secure data exchange. By doing this, we work as an ecosystem that each actor has its own responsibility but complement one another with respect to digital service consumption."
         },
         "contact" : {
             "title" : "Contact Us",
             "subtitle" : "We are happy to discuss with you whether you want to find more information or you want to join CamDX.",
             "detail1" : "ADDRESS",
-            "subdetail1" : "Ministry of Economy and Finance <br> St.92, Wat Phnom, Daun Penh, Phnom Penh, Cambodia",
+            "subdetail1" : "Ministry of Economy and Finance <br><br> St.92, Wat Phnom, Daun Penh, Phnom Penh, Cambodia",
             "detail2" : "CALL US",
-            "subdetail2" : "(855) 81 888 296",
             "detail3" : "EMAIL US",
-            "subdetail3" : "camdx@mef.gov.kh<br>registrationservices@mef.gov.kh",
             "detail4" : "WORKING HOURS",
-            "subdetail4" : "Mon - Fri: 8AM to 5PM <br>Except Public Holidays"
+            "subdetail4" : "Mon - Fri : 8AM to 5PM <br><br>Except Public Holidays"
         }
     },
     "obrPage" : {

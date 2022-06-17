@@ -36,7 +36,7 @@
             <v-row cols="12">
                 <v-col v-for="(item, index) in buttonItem" :key="index" cols="12" md="3" sm="6" xs="12" align="center" class="text-center">
                     <v-btn 
-                        depressed  width="100%" 
+                        depressed  width="100%" :href='item.link' target="_blank" outlined
                         :class="[(item.variable ? 'text-hover-true' : 'text-hover-false') + ' mr-1 text-none']"
                         @mouseover="item.variable = false" @mouseleave="item.variable = true">
                     <v-icon class="mr-4">{{item.icon}}</v-icon>
@@ -61,25 +61,25 @@ export default {
             {
                 icon: 'mdi-file-document',
                 label: 'Documentation',
-                link: '',
+                link: "https://github.com/Techo-Startup-Center/CamDigiKey-Integration",
                 variable : 'hover1'
             },
             {
                 icon: 'mdi-google-play',
                 label: 'Android',
-                link: '',
+                link: "https://github.com/Techo-Startup-Center/CamDigiKey-Sample-Code-Android",
                 variable : 'hover2'
             },
             {
                 icon: 'mdi-apple',
                 label: ' iOS',
-                link: '',
+                link: "https://github.com/Techo-Startup-Center/CamDigiKey-Sample-Code-IOS",
                 variable : 'hover3'
             },
             {
                 icon: 'mdi-open-in-new',
                 label: 'Web',
-                link: '',
+                link: "https://github.com/Techo-Startup-Center/CamDigiKey-Sample-Code-Server",
                 variable : 'hover4'
             }
         ]
@@ -102,12 +102,12 @@ export default {
 }
 
 .text-hover-true {
-    background: rgb(21, 21, 22) !important;
-    color: rgb(255, 255, 255) !important;
+    background: rgb(255, 255, 255) !important;
+    color: rgb(21, 21, 22) !important;
 }
 
 .text-hover-false {
-    background: rgb(255, 255, 255) !important;
-    color: rgb(30, 30, 30) !important;
+    background: rgb(30, 30, 30) !important;
+    color:rgb(255, 255, 255) !important;
 }
 </style>

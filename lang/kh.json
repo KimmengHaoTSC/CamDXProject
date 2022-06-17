@@ -14,7 +14,7 @@
         "monitoring" : "Monitoring"
     },
     "homePage" : {
-        "mainTitle": "វេទិកាផ្លាស់ប្តូរទិន្នន័យកម្ពុជា",
+        "mainTitle": "ថ្នាលផ្លាស់ប្តូរទិន្នន័យកម្ពុជា",
         "subTitle": "Securely allow multi-lateral data exchange between different information systems over the Internet.",
         "tab" : {
             "overview" : "Overview",
@@ -141,9 +141,7 @@
             "detail1" : "ADDRESS",
             "subdetail1" : "Ministry of Economy and Finance St.92, Wat Phnom, Daun Penh, Phnom Penh, Cambodia",
             "detail2" : "CALL US",
-            "subdetail2" : "(855) 81 888 296",
             "detail3" : "EMAIL US",
-            "subdetail3" : "camdx@mef.gov.kh registrationservices@mef.gov.kh",
             "detail4" : "WORKING HOURS",
             "subdetail4" : "Mon - Fri: 8AM to 5PM\nExcept Public Holidays"
         }

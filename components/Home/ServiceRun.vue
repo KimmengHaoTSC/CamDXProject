@@ -13,7 +13,7 @@
                     <v-row align="center">
                         <v-col v-for="(item, index) in items" :key="index" cols="12" md="4" sm="12">
                             <v-card class="mx-auto justify-center " light>
-                                <v-card color="primary" class="rounded-lg" height="200" dark>
+                                <v-card class="rounded-lg greybackground" height="200" light>
                                     <v-card-title>
                                     </v-card-title>
                                     <v-card-text class="subtitleSize font-weight-bold text-left" color="white">

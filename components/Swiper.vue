@@ -45,7 +45,7 @@ export default {
         disableOnInteraction: false,
       },
       speed: 1000,
-      spaceBetween: 30,
+      spaceBetween: 20,
       grabCursor: true,
     })
   },
