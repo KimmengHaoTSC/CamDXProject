@@ -1,8 +1,8 @@
 <template>
   <v-card class="rounded-0 pa-5 backgroundTheme">
     <v-container>
-        <v-row data-aos="fade-up" data-aos-duration="800">
-          <v-col cols="12" md="6" class="d-flex align-center mb-6">
+        <v-row data-aos="fade-up" data-aos-duration="800" class="d-flex align-center mb-6">
+          <v-col  cols="12" md="6">
             <v-row>
               <div class="maintitleSize mb-10">
                 {{ $t('homePage.mainTitle') }}
@@ -13,8 +13,8 @@
               </div>
             </v-row>
           </v-col>
-          <v-col cols="12" md="6" align="center">
-            <v-img :contain="true" :src="require('@/assets/maintitle.png')">
+          <v-col cols="12" md="6">
+            <v-img class="img-fluid" :src="require('@/assets/maintitle.png')">
             </v-img>
           </v-col>
         </v-row>

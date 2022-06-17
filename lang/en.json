@@ -54,7 +54,7 @@
                 "meaning": "All communications in CamDX are based on web services, preferably REST API, and therefore can be used by all developers."
             },
             "last" : {
-                "title": "",
+                "title": "<br/>",
                 "meaning": "CamDX connects systems built on any platforms and technologies of choice."
             }
         },

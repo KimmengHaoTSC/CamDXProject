@@ -1,7 +1,7 @@
 <template>
   <client-only>
     <div ref="swiper" class="swiper mySwiper text-center">
-      <div class="swiper-wrapper" >
+     <div class="swiper-wrapper" >
         <div v-for="(item, i) in items" :key="i" class="swiper-slide pt-5">
           <v-row>
             <v-col cols="12">
@@ -13,7 +13,7 @@
                 </template>
               </v-img>
             </v-col>
-            <v-col cols="12" class="textSize">
+            <v-col cols="12">
               {{ $t(item.title) }}
             </v-col>
           </v-row>
@@ -39,29 +39,41 @@ export default {
     await this.$nextTick()
     /* eslint-disable no-new */
     new Swiper(this.$refs.swiper, {
-        slidesPerView: 3,
+      slidesPerView: this.height(this.$vuetify.breakpoint.name) < 300 ? 2 : 3,
       autoplay: {
         delay: 2500,
         disableOnInteraction: false,
       },
-        // freeMode: true,
       speed: 1000,
-      spaceBetween: 20,
-      // roundLengths: true,
-      // mousewheel: true,
+      spaceBetween: 30,
       grabCursor: true,
     })
+  },
+  methods: {
+    height(size) {
+      switch (size) {
+        case 'xs':
+          return 220
+        case 'sm':
+          return 400
+        case 'md':
+          return 500
+        case 'lg':
+          return 600
+        case 'xl':
+          return 800
+      }
+    },
   },
 }
 </script>
 
 <style lang="scss">
 .swiper-slide {
-  
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 
   &.swiper-slide-active,
   &.swiper-slide-duplicate-active {
@@ -72,10 +84,8 @@ export default {
 }
 
 .swiper-wrapper {
-  // enough width to have off screen slides partially visible     
+  // enough width to have off screen slides partially visible
   // width: 73.8%;
   will-change: transform;
-
 }
-
 </style>

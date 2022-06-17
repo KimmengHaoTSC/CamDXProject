@@ -14,8 +14,8 @@
                     </div>
                 </v-col>
                 <v-col cols="12" data-aos="zoom-in">
-                <v-img :contain="true"  height="500" :src="require('assets/' + item.image + '.png')">
-                        </v-img>
+                <v-img class="img-fluid" :src="require('assets/' + item.image + '.png')">
+                </v-img>
                 </v-col>
             </v-row>
         </v-container>

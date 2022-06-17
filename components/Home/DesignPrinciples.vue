@@ -23,11 +23,12 @@
                                 :contain="true" height="100" :src="require('assets/' + item.avatar + '.png')"
                                 width="100"></v-img>
                         </v-card-text>
-                        <v-card-text class="subtitleSize font-weight-bold " align="center">
-                            {{ $t(item.title) }}
+                        <!-- eslint-disable vue/no-v-html -->
+                        <v-card-text class="subtitleSize font-weight-bold " align="center" v-html='$t(item.title)'>
+                        <!-- eslint-disable vue/no-v-html -->
                         </v-card-text>
-                        <v-card-text class="textSize ">
-                            {{ $t(item.meaning) }}
+                        <v-card-text class="textSize">
+                            {{$t(item.meaning)}}
                         </v-card-text></div>
                     </v-col>
                 </v-row>
