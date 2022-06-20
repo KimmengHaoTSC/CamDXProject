@@ -139,11 +139,11 @@
             "title" : "Contact Us",
             "subtitle" : "We are happy to discuss with you whether you want to find more information or you want to join CamDX.",
             "detail1" : "ADDRESS",
-            "subdetail1" : "Ministry of Economy and Finance St.92, Wat Phnom, Daun Penh, Phnom Penh, Cambodia",
+            "subdetail1" : "Ministry of Economy and Finance <br><br> St.92, Wat Phnom, Daun Penh, Phnom Penh, Cambodia",
             "detail2" : "CALL US",
             "detail3" : "EMAIL US",
             "detail4" : "WORKING HOURS",
-            "subdetail4" : "Mon - Fri: 8AM to 5PM\nExcept Public Holidays"
+            "subdetail4" : "Mon - Fri: 8AM to 5PM<br><br>Except Public Holidays"
         }
     },
     "obrPage" : {
@@ -166,5 +166,13 @@
             "question3": "How to Log into Portal/App with CamDigiKey?",
             "answer3": "<b>Web-based:</b> Go to a website that has been integrated with CamDigiKey application and scan the QR code that is shown on the website.<br><br><b>App-based:</b> Go to a mobile application that has been integrated with CamDigiKey application. After you click the “Login” button in the mobile application, you will receive a confirmation/rejection notification in the CamDigiKey application. Enter your personalized 6-digit pin code or biometric authentication to complete."
         }
+    },
+    "footer" : {
+        "allrightreserve": "រក្សាសិទ្ធិ © ២០២១ ដោយថ្នាលផ្លាស់ប្តូរទិន្នន័យ CamDX",
+        "termsofuse": "លក្ខខណ្ឌនៃការប្រើប្រាស់",
+        "privacypolicy": "គោលការណ៍​ឯកជនភាព​",
+        "phone": "លេខទូរស័ព្ទ",
+        "email": "អ៊ីមែល",
+        "connected" : "រក្សាទំនាក់ទំនង"
     }
 }

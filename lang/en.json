@@ -166,5 +166,13 @@
             "question3": "How to Log into Portal/App with CamDigiKey?",
             "answer3": "<b>Web-based:</b> Go to a website that has been integrated with CamDigiKey application and scan the QR code that is shown on the website.<br><br><b>App-based:</b> Go to a mobile application that has been integrated with CamDigiKey application. After you click the “Login” button in the mobile application, you will receive a confirmation/rejection notification in the CamDigiKey application. Enter your personalized 6-digit pin code or biometric authentication to complete."
         }
+    },
+    "footer" : {
+        "allrightreserve" : "©2020-2022 CamDX. All Rights Reserved",
+        "termsofuse": "Terms of Use",
+        "privacypolicy": "Privacy Policy",
+        "phone": "Phone",
+        "email": "Email",
+        "connected" : "Stay Connected"
     }
 }

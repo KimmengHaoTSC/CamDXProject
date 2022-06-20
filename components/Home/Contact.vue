@@ -68,8 +68,7 @@ export default {
 }
 </script>
 <style>
-    
-a {
-  color: primary !important;
-}
+    a {
+        color: primary !important;
+    }
 </style>

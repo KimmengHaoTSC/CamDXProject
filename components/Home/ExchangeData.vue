@@ -27,7 +27,7 @@
                                     <v-card-text class="subtitleSize font-weight-bold">
                                         {{ $t(item.title) }}
                                     </v-card-text>
-                                    <v-card-text class="textSize">
+                                    <v-card-text class="textSize text-justify">
                                         {{ $t(item.meaning) }}
                                     </v-card-text>
                                     </div>

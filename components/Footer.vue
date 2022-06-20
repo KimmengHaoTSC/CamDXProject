@@ -9,11 +9,11 @@
               >Ministry of Economy and Finance<br />
               Phnom Penh, Cambodia
             </v-row>
-            <v-row class="mb-3">Phone : &nbsp;
+            <v-row class="mb-3">{{$t('footer.phone')}} : &nbsp;
               <a href="tel:'`(855) 81 888 296`"> (855) 81 888 296</a></v-row
             >
             <v-row class="mb-3">
-            Email : &nbsp; <a :href="`mailto:camdx@mef.gov.kh`"> camdx@mef.gov.kh </a></v-row>
+            {{$t('footer.email')}} : &nbsp; <a :href="`mailto:camdx@mef.gov.kh`"> camdx@mef.gov.kh </a></v-row>
           </v-col>
           <v-col
             v-if="$route.path === '/' || $route.path == '/kh'"
@@ -56,7 +56,7 @@
             </v-row>
           </v-col>
           <v-col cols="12" md="2" sm="6" xs="12" align="center">
-            <v-row class="mb-5 text-left">Stay Connected</v-row>
+            <v-row class="mb-5 text-left">{{$t('footer.connected')}}</v-row>
             <v-row>
               <v-btn
                 text
@@ -70,10 +70,14 @@
         </v-row>
       </v-col>
       <v-divider></v-divider>
-      <v-row class="ma-4 "  >
-        <div class="textSize mb-4">©2020-2022 CamDX. All Rights Reserved</div>
+      <v-row class="ma-4"  >
+        <div class="textSize mb-4">{{ $t('footer.allrightreserve') }}</div>
         <v-spacer></v-spacer>
-        <div class="textSize">Terms of Use | Privacy Policy</div>
+        <div class="textSize">
+          <a href="https://camdx.gov.kh/terms.html">{{ $t('footer.termsofuse') }}</a>
+          | 
+          <a href="https://camdx.gov.kh/privacy.html">{{ $t('footer.privacypolicy') }}</a>
+          </div>
       </v-row>
     </v-container>
   </v-card>
@@ -84,3 +88,8 @@ export default {
   name: 'FooterMyPage',
 }
 </script>
+<style scoped>
+    a {
+        color: white !important;
+    }
+</style>

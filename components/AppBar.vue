@@ -73,6 +73,10 @@
         }}<v-icon>{{ item.icon }}</v-icon>
         </v-btn>
       </template>
+      <v-btn depressed tile plain class="py-8 hidden-sm-and-down text-capitalize" href="https://monitoring.camdx.gov.kh/" target="_blank">
+        {{ $t('appbar.monitoring') }}
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
       <v-btn 
         v-for="locale in availableLocales" :key="locale.code" depressed tile plain
         class="py-8 hidden-sm-and-down text-capitalize" @click="$i18n.setLocale(locale.code)">
@@ -119,22 +123,17 @@ export default {
           submenu: [
             {
               title: "appbar.subresources.sub1",
-              to: "/inspire",
+              to: "/#",
             },
             {
               title: "appbar.subresources.sub2",
-              to: "/index1",
+              to: "/#",
             },
             {
               title: "appbar.subresources.sub3",
               to: "/#",
             },
           ],
-        },
-        {
-          icon: "mdi-open-in-new",
-          title: "appbar.monitoring",
-          to: "/monitor",
         },
       ],
       Tabitems: [

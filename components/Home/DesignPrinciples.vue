@@ -27,7 +27,7 @@
                         <v-card-text class="subtitleSize font-weight-bold " align="center" v-html='$t(item.title)'>
                         <!-- eslint-disable vue/no-v-html -->
                         </v-card-text>
-                        <v-card-text class="textSize">
+                        <v-card-text class="textSize text-justify">
                             {{$t(item.meaning)}}
                         </v-card-text></div>
                     </v-col>
