@@ -6,7 +6,7 @@
                     <v-row>
                     <v-col cols="12" md="6" xs="12"  align="center">
                     <v-btn  
-                        depressed filled width="100%"
+                        depressed filled width="100%" href='https://play.google.com/store/apps/details?id=kh.gov.camdx.camdigikey' target="_blank"
                         :class="[(hoverAndroid ? 'foo-hover-true' : 'foo-hover-false') + ' mr-1 text-capitalize']"
                         @mouseover="hoverAndroid = true" @mouseleave="hoverAndroid = false">
                         <v-icon class="mr-4">mdi-google-play</v-icon>
@@ -15,7 +15,7 @@
                 </v-col>
                     <v-col cols="12" md="6" xs="12"  align="center">
                     <v-btn  
-                        depressed filled width="100%"
+                        depressed filled width="100%"  href='https://apps.apple.com/kh/app/camdigikey/id1509386989' target="_blank"
                         :class="[(hoverApple ? 'foo-hover-true' : 'foo-hover-false') + ' mr-1 text-none']"
                         @mouseover="hoverApple = true" @mouseleave="hoverApple = false">
                         <v-icon class="mr-4">mdi-apple</v-icon>
