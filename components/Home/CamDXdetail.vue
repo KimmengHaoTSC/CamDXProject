@@ -14,10 +14,10 @@
                         </div>
                     </v-row>
                 </v-col>
-                <v-col cols="12" md="6" sm="12" xs="12" >
+                <v-col cols="12" md="6" sm="12" xs="12">
                         <v-img 
                             data-aos="fade-up" data-aos-duration="450"
-                            :src="require('@/assets/camdx.png')" class="img-fluid"></v-img>
+                            :src="require('@/assets/camdx.png')" max-height="400px" :contain="true" class="img-fluid"></v-img>
                 </v-col>
             </v-row>
         </v-container>
