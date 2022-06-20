@@ -31,11 +31,10 @@
           </v-row>
         </v-col>
         <v-img
-          class="text-center image-center"
-          data-aos="fade-left"
-          :src="require('assets/secure.png')"
-          :contain="true"
-          max-width="300px"
+            class="img-fluid"
+            max-height="400px"
+            :contain="true"
+            :src="require('assets/secure.png')"
         ></v-img>
       </v-row>
     </v-container>
@@ -55,10 +54,3 @@ export default {
   }),
 }
 </script>
-<style scoped>
-.image-center {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-</style>
