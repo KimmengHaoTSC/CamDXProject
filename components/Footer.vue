@@ -91,5 +91,6 @@ export default {
 <style scoped>
     a {
         color: white !important;
+        text-decoration: none
     }
 </style>

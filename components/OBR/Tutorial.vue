@@ -9,7 +9,7 @@
                 </v-col>
                 <v-col cols="12">
                     <!-- eslint-disable vue/no-v-html -->
-                    <div class="subtitleSize text-left" v-html='$t(item.answer)'>
+                    <div class="subtitleSize text-left  text-justify" v-html='$t(item.answer)'>
                     <!-- eslint-disable vue/no-v-html -->
                     </div>
                 </v-col>

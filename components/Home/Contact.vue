@@ -70,5 +70,6 @@ export default {
 <style>
     a {
         color: primary !important;
+        text-decoration: none
     }
 </style>

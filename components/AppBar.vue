@@ -8,26 +8,32 @@
       <v-list>
         <v-list-item-group v-for="(item, i) in items" :key="i">
           <v-list-item v-if="!item.submenu" :to="item.to">
-            <!-- <v-list-item-action>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-action> -->
             <v-list-item-content>
-              <v-list-item-title class="textSize" v-text=$t(item.title) />
+              <v-list-item-title class="textSize" v-text='$t(item.title)' />
             </v-list-item-content>
           </v-list-item>
           <v-list-group v-else :prepend-icon="item.icon" no-action>
             <template #activator>
               <v-list-item-content>
-                <v-list-item-title class="textSize" v-text=$t(item.title)></v-list-item-title>
+                <v-list-item-title class="textSize" v-text='$t(item.title)'></v-list-item-title>
               </v-list-item-content>
             </template>
             <v-list-item v-for="(child, index) in item.submenu" :key="index" :to="child.to">
               <v-list-item-content>
-                <v-list-item-title v-text=$t(child.title)></v-list-item-title>
+                <v-list-item-title v-text='$t(child.title)'></v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </v-list-group>
         </v-list-item-group>
+        <v-list-item href="https://monitoring.camdx.gov.kh" target="_blank">
+          <v-list-item-content>
+            <v-list-item-title class="textSize" >{{ $t('appbar.monitoring') }}</v-list-item-title>
+          </v-list-item-content>
+          <v-list-item-icon>
+            <v-icon> mdi-open-in-new </v-icon>
+          </v-list-item-icon>
+
+        </v-list-item>
         <v-list-item v-for="locale in availableLocales" :key="locale.code" @click="$i18n.setLocale(locale.code)">
           <v-list-item-icon>
             <v-icon> mdi-web-box </v-icon>

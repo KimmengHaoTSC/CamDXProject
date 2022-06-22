@@ -7,7 +7,7 @@
         </div>
       </v-col>
       <v-col cols="12">
-        <div class="subtitleSize text-left">
+        <div class="subtitleSize text-left text-justify">
           {{ $t('obrPage.subtitle') }}
         </div>
       </v-col>
