@@ -1,8 +1,9 @@
 // Ref: https://github.com/nuxt-community/vuetify-module#customvariables
 //
 // The variables you want to modify
+@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hanuman&display=swap');
-$font-family: 'Hanuman', cursive;
+$font-family: 'Hind', sans-serif, 'Hanuman', cursive ;
 
 .v-application {
   [class*='text-'] {
